@@ -27,16 +27,16 @@ The following arc42 template deals with the architecture and documentation of an
 
 Team members are:
 
-Alexander Berg
-Alireza Jedi Tehrani
-Carolin Marquetand
+Alexander Berg  
+Alireza Jedi Tehrani  
+Carolin Marquetand  
 
 
 ## Requirements Overview
 
 <div class="formalpara-title">
 
-**Contents**
+**Contents**  
 
 **What is the Image Sharing App?**
 The main purpose is an image sharing app targeting photography enthusiasts and professionals, with a strong community aspect. 
@@ -59,13 +59,12 @@ The main purpose is an image sharing app targeting photography enthusiasts and p
 
 <div class="formalpara-title">
 
-**Contents**
+**Contents**  
 Table 1. Quality Goals
 
 | Priority | Quality | Motivation |
 |----------|----------|----------|
-| 1    | Usability   | The app must be user-friendly and easy to navigate
-The subscription model must be clearly communicated and easy to understand   |
+| 1    | Usability   | The app must be user-friendly and easy to navigate The subscription model must be clearly communicated and easy to understand   |
 | 2    | Reliability   | The app must be stable and function without significant bugs or errors   |
 | 3    | Performance   | The app must be optimized for performance and load times   |
 
