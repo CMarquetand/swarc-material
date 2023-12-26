@@ -23,18 +23,14 @@ concepts. For documentation of your own system you use better the
 
 # Introduction and Goals
 
-Describes the relevant requirements and the driving forces that software
-architects and development team must consider. These include
+The following arc42 template deals with the architecture and documentation of an "Image Sharing App". We are a team of dedicated professionals, working for a regional technology company. 
 
--   underlying business goals,
+Team members are:
 
--   essential features,
+Alexander Berg
+Alireza Jedi Tehrani
+Carolin Marquetand
 
--   essential functional requirements,
-
--   quality goals for the architecture and
-
--   relevant stakeholders and their expectations
 
 ## Requirements Overview
 
@@ -42,75 +38,40 @@ architects and development team must consider. These include
 
 **Contents**
 
+**What is the Image Sharing App?**
+The main purpose is an image sharing app targeting photography enthusiasts and professionals, with a strong community aspect. 
+
+**Main features**
+* Register and login
+* Upload and share images
+* Like images
+* Comment on images
+* Advanced editing through a third party integration with Pixlr
+* Make, use and save custom image filters
+* Social feed for following other users
+* Free tier with limited features and subscription model for full access
+
+ The app must be able to handle a large concurrent user base.
 </div>
 
-Short description of the functional requirements, driving forces,
-extract (or abstract) of requirements. Link to (hopefully existing)
-requirements documents (with version number and information where to
-find it).
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-From the point of view of the end users a system is created or modified
-to improve support of a business activity and/or improve the quality.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-Short textual description, probably in tabular use-case format. If
-requirements documents exist this overview should refer to these
-documents.
-
-Keep these excerpts as short as possible. Balance readability of this
-document with potential redundancy w.r.t to requirements documents.
-
-See [Introduction and Goals](https://docs.arc42.org/section-1/) in the
-arc42 documentation.
 
 ## Quality Goals
 
 <div class="formalpara-title">
 
 **Contents**
+Table 1. Quality Goals
+
+| Priority | Quality | Motivation |
+|----------|----------|----------|
+| 1    | Usability   | The app must be user-friendly and easy to navigate
+The subscription model must be clearly communicated and easy to understand   |
+| 2    | Reliability   | The app must be stable and function without significant bugs or errors   |
+| 3    | Performance   | The app must be optimized for performance and load times   |
+
 
 </div>
 
-The top three (max five) quality goals for the architecture whose
-fulfillment is of highest importance to the major stakeholders. We
-really mean quality goals for the architecture. Don’t confuse them with
-project goals. They are not necessarily identical.
-
-Consider this overview of potential topics (based upon the ISO 25010
-standard):
-
-![Categories of Quality
-Requirements](images/01_2_iso-25010-topics-EN.drawio.png)
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-You should know the quality goals of your most important stakeholders,
-since they will influence fundamental architectural decisions. Make sure
-to be very concrete about these qualities, avoid buzzwords. If you as an
-architect do not know how the quality of your work will be judged…
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-A table with quality goals and concrete scenarios, ordered by priorities
 
 ## Stakeholders
 
