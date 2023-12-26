@@ -75,6 +75,7 @@ Table 1. Quality Goals
 
 The following lists contains the most important personas for this application  
 
+Table 2. Stakeholders
 
 | Role/Name   | Expectations       |
 |-------------|--------------------|
