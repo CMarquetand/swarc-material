@@ -36,9 +36,7 @@ Carolin Marquetand
 
 <div class="formalpara-title">
 
-**Contents**  
-
-**What is the Image Sharing App?**
+**What is the Image Sharing App?**  
 The main purpose is an image sharing app targeting photography enthusiasts and professionals, with a strong community aspect. 
 
 **Main features**
@@ -59,7 +57,6 @@ The main purpose is an image sharing app targeting photography enthusiasts and p
 
 <div class="formalpara-title">
 
-**Contents**  
 Table 1. Quality Goals
 
 | Priority | Quality | Motivation |
@@ -76,47 +73,22 @@ Table 1. Quality Goals
 
 <div class="formalpara-title">
 
-**Contents**
+The following lists contains the most important personas for this application  
+
+
+| Role/Name   | Expectations       |
+|-------------|--------------------|
+| Marketing Manager, Sarah Chen, Bold Branding Agency | Expecting that the features of the application match the needs of the market, that the app is attractive to the target audience so that commercialisation and marketing campaigns are successful.|
+| Project Manager, Michael Nguyen, Digital Dreams Inc. | Expecting that the development of the app meets the timeframe and scope to manage deadlines, meetings and costs; Management of optimal use of resources; Focus on communication and collaboration of the team |
+| Lead Developer, Ava Patel, Pixel Perfect Solutions | High quality of application development, clear idea of the architecture, clear documentation; Prioritizing quality goals in application development;  |
+| UX/UI Designer, Emily Wong, Creative Co. | intuitive and attractive user interface with a focus on usability |
+| User Representative, Samir Singh, Photography Enthusiast | easy and intuitive usability, users' wishes are fulfilled, high reliability (no crashes or errors) |
+| Photography Expert, Lucas Rodriguez, Snap & Shoot Magazine | Testing the application and ensuring that the specific features of the application meet the needs of professional photographers. |
+
 
 </div>
 
-Explicit overview of stakeholders of the system, i.e. all person, roles
-or organizations that
 
--   should know the architecture
-
--   have to be convinced of the architecture
-
--   have to work with the architecture or with code
-
--   need the documentation of the architecture for their work
-
--   have to come up with decisions about the system or its development
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-You should know all parties involved in development of the system or
-affected by the system. Otherwise, you may get nasty surprises later in
-the development process. These stakeholders determine the extent and the
-level of detail of your work and its results.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-Table with role names, person names, and their expectations with respect
-to the architecture and its documentation.
-
-| Role/Name   | Contact        | Expectations       |
-|-------------|----------------|--------------------|
-| *\<Role-1>* | *\<Contact-1>* | *\<Expectation-1>* |
-| *\<Role-2>* | *\<Contact-2>* | *\<Expectation-2>* |
 
 <div style="page-break-after: always;"></div>
 
