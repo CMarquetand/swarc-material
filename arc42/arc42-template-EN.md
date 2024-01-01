@@ -27,9 +27,9 @@ The following arc42 template deals with the architecture and documentation of an
 
 Team members are:
 
-Alexander Berg  
-Alireza Jedi Tehrani  
-Carolin Marquetand  
+Alexander B.  
+Alireza J.  
+Carolin M.
 
 
 ## Requirements Overview
