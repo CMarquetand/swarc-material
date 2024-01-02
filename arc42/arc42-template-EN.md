@@ -97,6 +97,15 @@ Table 2. Stakeholders
 
 <div class="formalpara-title">
 
+| Constraints   | Background and/or motivation       |
+|-------------|--------------------|
+|Storage and Data Management| Because of high-quality images, each user should have a memory limitation; Cloud based storage; Efficient Data retrieval: efficient search and retrieval of images|
+|Multi-Language-support| Because it is a regional project in Austria, it should support both german and english|
+|Third-party-integration| The integration of the third-party service (Pixlr) puts some constraints on the features of the application, ensure efficient API management |
+|Budgetary Limitations| available budget constraints the scale of infrastructure, and the acquisition of third-party services|
+|Platform Compatibility| The application should work on IOS |
+
+
 **Contents**
 
 </div>
