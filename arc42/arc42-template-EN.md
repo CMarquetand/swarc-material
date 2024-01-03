@@ -186,7 +186,56 @@ documentation.
 
 <div class="formalpara-title">
 
-**Contents**
+<table border="1">
+    <tr>
+        <th>Communication Partner</th>
+        <th>Interfaces</th>
+        <th>Inputs</th>
+        <th>Outputs</th>
+    </tr>
+    <tr>
+        <td>Users</td>
+        <td>Mobile App, User Interface, social feed</td>
+        <td>User credentials, image upload, comments, likes</td>
+        <td>shared images, notifications</td>
+    </tr>
+    <tr>
+        <td>IT-Systems (Pixlr)</td>
+        <td>Pixlr Integration, Image Editing</td>
+        <td>Image data, filter settings</td>
+        <td>edited images, processing status</td>
+    </tr>
+    <tr>
+        <td>Cloud provider</td>
+        <td>Cloud Storage APIs</td>
+        <td>Image storage and retrieval</td>
+        <td>Scalable image storage solution</td>
+    </tr>
+    <tr>
+        <td>Subscription System</td>
+        <td>Payment Gateway, Subscription Management</td>
+        <td>User subscriptions, payment details</td>
+        <td>Full access permissions</td>
+    </tr>
+    <tr>
+        <td>Social Media Platforms</td>
+        <td>Social Media APIs</td>
+        <td>User shared content</td>
+        <td>Increased app visibility, user acquisition</td>
+    </tr>
+    <tr>
+        <td>Marketing Manager</td>
+        <td>Marketing Campaign, Analytics Integration</td>
+        <td>Marketing data, campaign details</td>
+        <td>user engagement data</td>
+    </tr>
+    <tr>
+        <td>UX/UI Designer</td>
+        <td>UI/UX Design, Design Tools</td>
+        <td>Design mockups, User feedback</td>
+        <td>UI/UX improvements, usability metrics</td>
+    </tr>
+</table>
 
 </div>
 
@@ -266,7 +315,25 @@ and input/output.
 
 <div class="formalpara-title">
 
-**Contents**
+<table border="1">
+    <tr>
+        <th>Goal/Requirements</th>
+        <th>Architectural Approach</th>
+    </tr>
+    <tr>
+        <td>Scalability</td>
+        <td>Microservices</td>
+    </tr>
+    <tr>
+        <td>Performance</td>
+        <td>Caching Strategies and Content Delivery Networks (CDN)</td>
+    </tr>
+    <tr>
+        <td>Reliability</td>
+        <td>Redundancy and Load Balancing</td>
+    </tr>
+</table>
+
 
 </div>
 
