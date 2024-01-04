@@ -21,7 +21,10 @@ _plain_ version.
 
 <div style="page-break-after: always;"></div>
 
-# Introduction and Goals
+<hr>
+<br>
+
+# 1. Introduction and Goals
 
 The following arc42 template deals with the architecture and documentation of an "Image Sharing App". We are a team of dedicated professionals, working for a regional technology company.
 
@@ -31,7 +34,7 @@ Alexander B.
 Alireza J.  
 Carolin M.
 
-## Requirements Overview
+## 1.1. Requirements Overview
 
 <div class="formalpara-title">
 
@@ -53,7 +56,7 @@ The app must be able to handle a large concurrent user base.
 
 </div>
 
-## Quality Goals
+## 1.2. Quality Goals
 
 <div class="formalpara-title">
 
@@ -67,7 +70,7 @@ Table 1. Quality Goals
 
 </div>
 
-## Stakeholders
+## 1.3. Stakeholders
 
 <div class="formalpara-title">
 
@@ -88,7 +91,10 @@ Table 2. Stakeholders
 
 <div style="page-break-after: always;"></div>
 
-# Architecture Constraints
+<hr>
+<br>
+
+# 2. Architecture Constraints
 
 <div class="formalpara-title">
 
@@ -135,7 +141,10 @@ arc42 documentation.
 
 <div style="page-break-after: always;"></div>
 
-# System Scope and Context
+<hr>
+<br>
+
+# 3. System Scope and Context
 
 <div class="formalpara-title">
 
@@ -176,7 +185,7 @@ Various options:
 See [Context and Scope](https://docs.arc42.org/section-3/) in the arc42
 documentation.
 
-## Business Context
+## 3.1. Business Context
 
 <div class="formalpara-title">
 
@@ -264,7 +273,7 @@ the communication partner, the inputs, and the outputs.
 
 **\<optionally: Explanation of external domain interfaces>**
 
-## Technical Context
+## 3.2. Technical Context
 
 <div class="formalpara-title">
 
@@ -305,7 +314,10 @@ and input/output.
 
 <div style="page-break-after: always;"></div>
 
-# Solution Strategy
+<hr>
+<br>
+
+# 4. Solution Strategy
 
 <div class="formalpara-title">
 
@@ -370,7 +382,10 @@ documentation.
 
 <div style="page-break-after: always;"></div>
 
-# Building Block View
+<hr>
+<br>
+
+# 5. Building Block View
 
 <div class="formalpara-title">
 
@@ -422,7 +437,7 @@ together with black box descriptions of their internal building blocks.
 See [Building Block View](https://docs.arc42.org/section-5/) in the
 arc42 documentation.
 
-## Whitebox Overall System
+## 5.1. Whitebox Overall System
 
 Here you describe the decomposition of the overall system using the
 following white box template. It contains
@@ -524,7 +539,7 @@ _\<black box template>_
 
 ### \<Name interface m>
 
-## Level 2
+## 5.2. Level 2
 
 Here you can specify the inner structure of (some) building blocks from
 level 1 as white boxes.
@@ -551,7 +566,7 @@ _\<white box template>_
 
 _\<white box template>_
 
-## Level 3
+## 5.3. Level 3
 
 Here you can specify the inner structure of (some) building blocks from
 level 2 as white boxes.
@@ -575,7 +590,10 @@ _\<white box template>_
 
 <div style="page-break-after: always;"></div>
 
-# Runtime View
+<hr>
+<br>
+
+# 6. Runtime View
 
 <div class="formalpara-title">
 
@@ -651,7 +669,10 @@ documentation.
 
 <div style="page-break-after: always;"></div>
 
-# Deployment View
+<hr>
+<br>
+
+# 7. Deployment View
 
 <div class="formalpara-title">
 
@@ -761,7 +782,10 @@ _\<diagram + explanation>_
 
 <div style="page-break-after: always;"></div>
 
-# Cross-cutting Concepts
+<hr>
+<br>
+
+# 8. Cross-cutting Concepts
 
 <div class="formalpara-title">
 
@@ -863,7 +887,10 @@ _\<explanation>_
 
 <div style="page-break-after: always;"></div>
 
-# Architecture Decisions
+<hr>
+<br>
+
+# 9. Architecture Decisions
 
 <div class="formalpara-title">
 
@@ -950,7 +977,10 @@ arc42 documentation. There you will find links and examples about ADR.-->
 
 <div style="page-break-after: always;"></div>
 
-# Quality Requirements
+<hr>
+<br>
+
+# 10. Quality Requirements
 
 <div class="formalpara-title">
 
@@ -978,7 +1008,7 @@ to them, concrete and measurable.
 See [Quality Requirements](https://docs.arc42.org/section-10/) in the
 arc42 documentation.
 
-## Quality Tree
+## 10.1. Quality Tree
 
 <div class="formalpara-title">
 
@@ -1015,7 +1045,7 @@ requirements:
 In any case the tree should include links to the scenarios of the
 following section.
 
-## Quality Scenarios
+## 10.2. Quality Scenarios
 
 <div class="formalpara-title">
 
@@ -1065,7 +1095,10 @@ Tabular or free form text.
 
 <div style="page-break-after: always;"></div>
 
-# Risks and Technical Debts
+<hr>
+<br>
+
+# 11. Risks and Technical Debts
 
 <div class="formalpara-title">
 
@@ -1120,7 +1153,10 @@ the arc42 documentation.
 
 <div style="page-break-after: always;"></div> -->
 
-# Glossary
+<hr>
+<br>
+
+# 12. Glossary
 
 <div class="formalpara-title">
 
