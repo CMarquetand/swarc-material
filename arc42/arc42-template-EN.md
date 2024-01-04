@@ -1,4 +1,4 @@
-# 
+#
 
 **About arc42**
 
@@ -15,7 +15,7 @@ contributors. See <https://arc42.org>.
 This version of the template contains some help and explanations. It is
 used for familiarization with arc42 and the understanding of the
 concepts. For documentation of your own system you use better the
-*plain* version.
+_plain_ version.
 
 </div>
 
@@ -23,7 +23,7 @@ concepts. For documentation of your own system you use better the
 
 # Introduction and Goals
 
-The following arc42 template deals with the architecture and documentation of an "Image Sharing App". We are a team of dedicated professionals, working for a regional technology company. 
+The following arc42 template deals with the architecture and documentation of an "Image Sharing App". We are a team of dedicated professionals, working for a regional technology company.
 
 Team members are:
 
@@ -31,27 +31,27 @@ Alexander B.
 Alireza J.  
 Carolin M.
 
-
 ## Requirements Overview
 
 <div class="formalpara-title">
 
 **What is the Image Sharing App?**  
-The main purpose is an image sharing app targeting photography enthusiasts and professionals, with a strong community aspect. 
+The main purpose is an image sharing app targeting photography enthusiasts and professionals, with a strong community aspect.
 
 **Main features**
-* Register and login
-* Upload and share images
-* Like images
-* Comment on images
-* Advanced editing through a third party integration with Pixlr
-* Make, use and save custom image filters
-* Social feed for following other users
-* Free tier with limited features and subscription model for full access
 
- The app must be able to handle a large concurrent user base.
+- Register and login
+- Upload and share images
+- Like images
+- Comment on images
+- Advanced editing through a third party integration with Pixlr
+- Make, use and save custom image filters
+- Social feed for following other users
+- Free tier with limited features and subscription model for full access
+
+The app must be able to handle a large concurrent user base.
+
 </div>
-
 
 ## Quality Goals
 
@@ -59,37 +59,32 @@ The main purpose is an image sharing app targeting photography enthusiasts and p
 
 Table 1. Quality Goals
 
-| Priority | Quality | Motivation |
-|----------|----------|----------|
-| 1    | Usability   | The app must be user-friendly and easy to navigate The subscription model must be clearly communicated and easy to understand   |
-| 2    | Reliability   | The app must be stable and function without significant bugs or errors   |
-| 3    | Performance   | The app must be optimized for performance and load times   |
-
+| Priority | Quality     | Motivation                                                                                                                    |
+| -------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 1        | Usability   | The app must be user-friendly and easy to navigate The subscription model must be clearly communicated and easy to understand |
+| 2        | Reliability | The app must be stable and function without significant bugs or errors                                                        |
+| 3        | Performance | The app must be optimized for performance and load times                                                                      |
 
 </div>
-
 
 ## Stakeholders
 
 <div class="formalpara-title">
 
-The following lists contains the most important personas for this application  
+The following lists contains the most important personas for this application
 
 Table 2. Stakeholders
 
-| Role/Name   | Expectations       |
-|-------------|--------------------|
-| Marketing Manager, Sarah Chen, Bold Branding Agency | Expecting that the features of the application match the needs of the market, that the app is attractive to the target audience so that commercialisation and marketing campaigns are successful.|
-| Project Manager, Michael Nguyen, Digital Dreams Inc. | Expecting that the development of the app meets the timeframe and scope to manage deadlines, meetings and costs; Management of optimal use of resources; Focus on communication and collaboration of the team |
-| Lead Developer, Ava Patel, Pixel Perfect Solutions | High quality of application development, clear idea of the architecture, clear documentation; Prioritizing quality goals in application development;  |
-| UX/UI Designer, Emily Wong, Creative Co. | intuitive and attractive user interface with a focus on usability |
-| User Representative, Samir Singh, Photography Enthusiast | easy and intuitive usability, users' wishes are fulfilled, high reliability (no crashes or errors) |
-| Photography Expert, Lucas Rodriguez, Snap & Shoot Magazine | Testing the application and ensuring that the specific features of the application meet the needs of professional photographers. |
-
+| Role/Name                                                  | Expectations                                                                                                                                                                                                  |
+| ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Marketing Manager, Sarah Chen, Bold Branding Agency        | Expecting that the features of the application match the needs of the market, that the app is attractive to the target audience so that commercialisation and marketing campaigns are successful.             |
+| Project Manager, Michael Nguyen, Digital Dreams Inc.       | Expecting that the development of the app meets the timeframe and scope to manage deadlines, meetings and costs; Management of optimal use of resources; Focus on communication and collaboration of the team |
+| Lead Developer, Ava Patel, Pixel Perfect Solutions         | High quality of application development, clear idea of the architecture, clear documentation; Prioritizing quality goals in application development;                                                          |
+| UX/UI Designer, Emily Wong, Creative Co.                   | intuitive and attractive user interface with a focus on usability                                                                                                                                             |
+| User Representative, Samir Singh, Photography Enthusiast   | easy and intuitive usability, users' wishes are fulfilled, high reliability (no crashes or errors)                                                                                                            |
+| Photography Expert, Lucas Rodriguez, Snap & Shoot Magazine | Testing the application and ensuring that the specific features of the application meet the needs of professional photographers.                                                                              |
 
 </div>
-
-
 
 <div style="page-break-after: always;"></div>
 
@@ -97,14 +92,13 @@ Table 2. Stakeholders
 
 <div class="formalpara-title">
 
-| Constraints   | Background and/or motivation       |
-|-------------|--------------------|
-|Storage and Data Management| Because of high-quality images, each user should have a memory limitation; Cloud based storage; Efficient Data retrieval: efficient search and retrieval of images|
-|Multi-Language-support| Because it is a regional project in Austria, it should support both german and english|
-|Third-party-integration| The integration of the third-party service (Pixlr) puts some constraints on the features of the application, ensure efficient API management |
-|Budgetary Limitations| available budget constraints the scale of infrastructure, and the acquisition of third-party services|
-|Platform Compatibility| The application should work on IOS |
-
+| Constraints                 | Background and/or motivation                                                                                                                                       |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Storage and Data Management | Because of high-quality images, each user should have a memory limitation; Cloud based storage; Efficient Data retrieval: efficient search and retrieval of images |
+| Multi-Language-support      | Because it is a regional project in Austria, it should support both german and english                                                                             |
+| Third-party-integration     | The integration of the third-party service (Pixlr) puts some constraints on the features of the application, ensure efficient API management                       |
+| Budgetary Limitations       | available budget constraints the scale of infrastructure, and the acquisition of third-party services                                                              |
+| Platform Compatibility      | The application should work on IOS                                                                                                                                 |
 
 **Contents**
 
@@ -175,9 +169,9 @@ completely understand them.
 
 Various options:
 
--   Context diagrams
+- Context diagrams
 
--   Lists of communication partners and their interfaces.
+- Lists of communication partners and their interfaces.
 
 See [Context and Scope](https://docs.arc42.org/section-3/) in the arc42
 documentation.
@@ -334,21 +328,20 @@ and input/output.
     </tr>
 </table>
 
-
 </div>
 
 A short summary and explanation of the fundamental decisions and
 solution strategies, that shape system architecture. It includes
 
--   technology decisions
+- technology decisions
 
--   decisions about the top-level decomposition of the system, e.g.
-    usage of an architectural pattern or design pattern
+- decisions about the top-level decomposition of the system, e.g.
+  usage of an architectural pattern or design pattern
 
--   decisions on how to achieve key quality goals
+- decisions on how to achieve key quality goals
 
--   relevant organizational decisions, e.g. selecting a development
-    process or delegating certain tasks to third parties.
+- relevant organizational decisions, e.g. selecting a development
+  process or delegating certain tasks to third parties.
 
 <div class="formalpara-title">
 
@@ -392,7 +385,7 @@ functions, macros, operations, data structures, …) as well as their
 dependencies (relationships, associations, …)
 
 This view is mandatory for every architecture documentation. In analogy
-to a house this is the *floor plan*.
+to a house this is the _floor plan_.
 
 <div class="formalpara-title">
 
@@ -434,41 +427,41 @@ arc42 documentation.
 Here you describe the decomposition of the overall system using the
 following white box template. It contains
 
--   an overview diagram
+- an overview diagram
 
--   a motivation for the decomposition
+- a motivation for the decomposition
 
--   black box descriptions of the contained building blocks. For these
-    we offer you alternatives:
+- black box descriptions of the contained building blocks. For these
+  we offer you alternatives:
 
-    -   use *one* table for a short and pragmatic overview of all
-        contained building blocks and their interfaces
+  - use _one_ table for a short and pragmatic overview of all
+    contained building blocks and their interfaces
 
-    -   use a list of black box descriptions of the building blocks
-        according to the black box template (see below). Depending on
-        your choice of tool this list could be sub-chapters (in text
-        files), sub-pages (in a Wiki) or nested elements (in a modeling
-        tool).
+  - use a list of black box descriptions of the building blocks
+    according to the black box template (see below). Depending on
+    your choice of tool this list could be sub-chapters (in text
+    files), sub-pages (in a Wiki) or nested elements (in a modeling
+    tool).
 
--   (optional:) important interfaces, that are not explained in the
-    black box templates of a building block, but are very important for
-    understanding the white box. Since there are so many ways to specify
-    interfaces why do not provide a specific template for them. In the
-    worst case you have to specify and describe syntax, semantics,
-    protocols, error handling, restrictions, versions, qualities,
-    necessary compatibilities and many things more. In the best case you
-    will get away with examples or simple signatures.
+- (optional:) important interfaces, that are not explained in the
+  black box templates of a building block, but are very important for
+  understanding the white box. Since there are so many ways to specify
+  interfaces why do not provide a specific template for them. In the
+  worst case you have to specify and describe syntax, semantics,
+  protocols, error handling, restrictions, versions, qualities,
+  necessary compatibilities and many things more. In the best case you
+  will get away with examples or simple signatures.
 
-***\<Overview Diagram>***
+**_\<Overview Diagram>_**
 
 Motivation  
-*\<text explanation>*
+_\<text explanation>_
 
 Contained Building Blocks  
-*\<Description of contained building block (black boxes)>*
+_\<Description of contained building block (black boxes)>_
 
 Important Interfaces  
-*\<Description of important interfaces>*
+_\<Description of important interfaces>_
 
 Insert your explanations of black boxes from level 1:
 
@@ -476,9 +469,9 @@ If you use tabular form you will only describe your black boxes with
 name and responsibility according to the following schema:
 
 | **Name**         | **Responsibility** |
-|------------------|--------------------|
-| *\<black box 1>* |  *\<Text>*         |
-| *\<black box 2>* |  *\<Text>*         |
+| ---------------- | ------------------ |
+| _\<black box 1>_ |  *\<Text>*         |
+| _\<black box 2>_ |  *\<Text>*         |
 
 If you use a list of black box descriptions then you fill in a separate
 black box template for every important building block . Its headline is
@@ -489,41 +482,41 @@ the name of the black box.
 Here you describe \<black box 1> according the the following black box
 template:
 
--   Purpose/Responsibility
+- Purpose/Responsibility
 
--   Interface(s), when they are not extracted as separate paragraphs.
-    This interfaces may include qualities and performance
-    characteristics.
+- Interface(s), when they are not extracted as separate paragraphs.
+  This interfaces may include qualities and performance
+  characteristics.
 
--   (Optional) Quality-/Performance characteristics of the black box,
-    e.g.availability, run time behavior, ….
+- (Optional) Quality-/Performance characteristics of the black box,
+  e.g.availability, run time behavior, ….
 
--   (Optional) directory/file location
+- (Optional) directory/file location
 
--   (Optional) Fulfilled requirements (if you need traceability to
-    requirements).
+- (Optional) Fulfilled requirements (if you need traceability to
+  requirements).
 
--   (Optional) Open issues/problems/risks
+- (Optional) Open issues/problems/risks
 
-*\<Purpose/Responsibility>*
+_\<Purpose/Responsibility>_
 
-*\<Interface(s)>*
+_\<Interface(s)>_
 
-*\<(Optional) Quality/Performance Characteristics>*
+_\<(Optional) Quality/Performance Characteristics>_
 
-*\<(Optional) Directory/File Location>*
+_\<(Optional) Directory/File Location>_
 
-*\<(Optional) Fulfilled Requirements>*
+_\<(Optional) Fulfilled Requirements>_
 
-*\<(optional) Open Issues/Problems/Risks>*
+_\<(optional) Open Issues/Problems/Risks>_
 
 ### \<Name black box 2>
 
-*\<black box template>*
+_\<black box template>_
 
 ### \<Name black box n>
 
-*\<black box template>*
+_\<black box template>_
 
 ### \<Name interface 1>
 
@@ -542,21 +535,21 @@ over completeness. Specify important, surprising, risky, complex or
 volatile building blocks. Leave out normal, simple, boring or
 standardized parts of your system
 
-### White Box *\<building block 1>*
+### White Box _\<building block 1>_
 
-…describes the internal structure of *building block 1*.
+…describes the internal structure of _building block 1_.
 
-*\<white box template>*
+_\<white box template>_
 
-### White Box *\<building block 2>*
+### White Box _\<building block 2>_
 
-*\<white box template>*
+_\<white box template>_
 
 …
 
-### White Box *\<building block m>*
+### White Box _\<building block m>_
 
-*\<white box template>*
+_\<white box template>_
 
 ## Level 3
 
@@ -568,17 +561,17 @@ part of arc42 for additional levels.
 
 ### White Box \<\_building block x.1\_\>
 
-Specifies the internal structure of *building block x.1*.
+Specifies the internal structure of _building block x.1_.
 
-*\<white box template>*
+_\<white box template>_
 
 ### White Box \<\_building block x.2\_\>
 
-*\<white box template>*
+_\<white box template>_
 
 ### White Box \<\_building block y.1\_\>
 
-*\<white box template>*
+_\<white box template>_
 
 <div style="page-break-after: always;"></div>
 
@@ -593,15 +586,15 @@ Specifies the internal structure of *building block x.1*.
 The runtime view describes concrete behavior and interactions of the
 system’s building blocks in form of scenarios from the following areas:
 
--   important use cases or features: how do building blocks execute
-    them?
+- important use cases or features: how do building blocks execute
+  them?
 
--   interactions at critical external interfaces: how do building blocks
-    cooperate with users and neighboring systems?
+- interactions at critical external interfaces: how do building blocks
+  cooperate with users and neighboring systems?
 
--   operation and administration: launch, start-up, stop
+- operation and administration: launch, start-up, stop
 
--   error and exception scenarios
+- error and exception scenarios
 
 Remark: The main criterion for the choice of possible scenarios
 (sequences, workflows) is their **architectural relevance**. It is
@@ -628,27 +621,27 @@ static models (building block view, deployment view).
 
 There are many notations for describing scenarios, e.g.
 
--   numbered list of steps (in natural language)
+- numbered list of steps (in natural language)
 
--   activity diagrams or flow charts
+- activity diagrams or flow charts
 
--   sequence diagrams
+- sequence diagrams
 
--   BPMN or EPCs (event process chains)
+- BPMN or EPCs (event process chains)
 
--   state machines
+- state machines
 
--   …
+- …
 
 See [Runtime View](https://docs.arc42.org/section-6/) in the arc42
 documentation.
 
 ## \<Runtime Scenario 1>
 
--   *\<insert runtime diagram or textual description of the scenario>*
+- _\<insert runtime diagram or textual description of the scenario>_
 
--   *\<insert description of the notable aspects of the interactions
-    between the building block instances depicted in this diagram.>*
+- _\<insert description of the notable aspects of the interactions
+  between the building block instances depicted in this diagram.>_
 
 ## \<Runtime Scenario 2>
 
@@ -705,13 +698,13 @@ Maybe a highest level deployment diagram is already contained in section
 In this section one can zoom into this black box using additional
 deployment diagrams:
 
--   UML offers deployment diagrams to express that view. Use it,
-    probably with nested diagrams, when your infrastructure is more
-    complex.
+- UML offers deployment diagrams to express that view. Use it,
+  probably with nested diagrams, when your infrastructure is more
+  complex.
 
--   When your (hardware) stakeholders prefer other kinds of diagrams
-    rather than a deployment diagram, let them use any kind that is able
-    to show nodes and channels of the infrastructure.
+- When your (hardware) stakeholders prefer other kinds of diagrams
+  rather than a deployment diagram, let them use any kind that is able
+  to show nodes and channels of the infrastructure.
 
 See [Deployment View](https://docs.arc42.org/section-7/) in the arc42
 documentation.
@@ -720,30 +713,30 @@ documentation.
 
 Describe (usually in a combination of diagrams, tables, and text):
 
--   distribution of a system to multiple locations, environments,
-    computers, processors, .., as well as physical connections between
-    them
+- distribution of a system to multiple locations, environments,
+  computers, processors, .., as well as physical connections between
+  them
 
--   important justifications or motivations for this deployment
-    structure
+- important justifications or motivations for this deployment
+  structure
 
--   quality and/or performance features of this infrastructure
+- quality and/or performance features of this infrastructure
 
--   mapping of software artifacts to elements of this infrastructure
+- mapping of software artifacts to elements of this infrastructure
 
 For multiple environments or alternative deployments please copy and
 adapt this section of arc42 for all relevant environments.
 
-***\<Overview Diagram>***
+**_\<Overview Diagram>_**
 
 Motivation  
-*\<explanation in text form>*
+_\<explanation in text form>_
 
 Quality and/or Performance Features  
-*\<explanation in text form>*
+_\<explanation in text form>_
 
 Mapping of Building Blocks to Infrastructure  
-*\<description of the mapping>*
+_\<description of the mapping>_
 
 ## Infrastructure Level 2
 
@@ -752,19 +745,19 @@ elements from level 1.
 
 Please copy the structure from level 1 for each selected element.
 
-### *\<Infrastructure Element 1>*
+### _\<Infrastructure Element 1>_
 
-*\<diagram + explanation>*
+_\<diagram + explanation>_
 
-### *\<Infrastructure Element 2>*
+### _\<Infrastructure Element 2>_
 
-*\<diagram + explanation>*
+_\<diagram + explanation>_
 
 …
 
-### *\<Infrastructure Element n>*
+### _\<Infrastructure Element n>_
 
-*\<diagram + explanation>*
+_\<diagram + explanation>_
 
 <div style="page-break-after: always;"></div>
 
@@ -781,16 +774,16 @@ that are relevant in multiple parts (= cross-cutting) of your system.
 Such concepts are often related to multiple building blocks. They can
 include many different topics, such as
 
--   models, especially domain models
+- models, especially domain models
 
--   architecture or design patterns
+- architecture or design patterns
 
--   rules for using specific technology
+- rules for using specific technology
 
--   principal, often technical decisions of an overarching (=
-    cross-cutting) nature
+- principal, often technical decisions of an overarching (=
+  cross-cutting) nature
 
--   implementation rules
+- implementation rules
 
 <div class="formalpara-title">
 
@@ -798,7 +791,7 @@ include many different topics, such as
 
 </div>
 
-Concepts form the basis for *conceptual integrity* (consistency,
+Concepts form the basis for _conceptual integrity_ (consistency,
 homogeneity) of the architecture. Thus, they are an important
 contribution to achieve inner qualities of your system.
 
@@ -813,15 +806,15 @@ e.g. security or safety.
 
 The form can be varied:
 
--   concept papers with any kind of structure
+- concept papers with any kind of structure
 
--   cross-cutting model excerpts or scenarios using notations of the
-    architecture views
+- cross-cutting model excerpts or scenarios using notations of the
+  architecture views
 
--   sample implementations, especially for technical concepts
+- sample implementations, especially for technical concepts
 
--   reference to typical usage of standard frameworks (e.g. using
-    Hibernate for object/relational mapping)
+- reference to typical usage of standard frameworks (e.g. using
+  Hibernate for object/relational mapping)
 
 <div class="formalpara-title">
 
@@ -831,19 +824,19 @@ The form can be varied:
 
 A potential (but not mandatory) structure for this section could be:
 
--   Domain concepts
+- Domain concepts
 
--   User Experience concepts (UX)
+- User Experience concepts (UX)
 
--   Safety and security concepts
+- Safety and security concepts
 
--   Architecture and design patterns
+- Architecture and design patterns
 
--   "Under-the-hood"
+- "Under-the-hood"
 
--   development concepts
+- development concepts
 
--   operational concepts
+- operational concepts
 
 Note: it might be difficult to assign individual concepts to one
 specific topic on this list.
@@ -854,19 +847,19 @@ concepts](images/08-Crosscutting-Concepts-Structure-EN.png)
 See [Concepts](https://docs.arc42.org/section-8/) in the arc42
 documentation.
 
-## *\<Concept 1>*
+## _\<Concept 1>_
 
-*\<explanation>*
+_\<explanation>_
 
-## *\<Concept 2>*
+## _\<Concept 2>_
 
-*\<explanation>*
+_\<explanation>_
 
 …
 
-## *\<Concept n>*
+## _\<Concept n>_
 
-*\<explanation>*
+_\<explanation>_
 
 <div style="page-break-after: always;"></div>
 
@@ -874,11 +867,48 @@ documentation.
 
 <div class="formalpara-title">
 
-**Contents**
+<table border="1">
+    <tr>
+        <th>Problem</th>
+        <th>Considered Alternatives</th>
+        <th>Decision</th>
+    </tr>
+    <tr>
+        <td>Large number of users/images</td>
+        <td>
+            <ul>
+                <li>Micro Services</li>
+                <li>Monolithic</li>
+            </ul>
+        </td>
+        <td>Micro Services, because of scalability and reliability in a scaling scenario</td>
+    </tr>
+    <tr>
+        <td>Optimizing Image Loading Performance</td>
+        <td>
+            <ul>
+                <li>Synchronous Image Loading</li>
+                <li>Asynchronous Image Loading with Caching</li>
+            </ul>
+        </td>
+        <td>Asynchronous, because of faster loading, smoother user experience, reduced waiting.</td>
+    </tr>
+    <tr>
+        <td>Ensuring High Availability in Case of Server Failures</td>
+        <td>
+            <ul>
+                <li>Single Server with Failover Mechanism</li>
+                <li>Load Balancing across Multiple Servers</li>
+            </ul>
+        </td>
+        <td>Load Balancing, because of enhanced reliability, prevents overloading, ensures availability.</td>
+    </tr>
+</table>
+</br>
 
 </div>
 
-Important, expensive, large scale or risky architecture decisions
+<!-- Important, expensive, large scale or risky architecture decisions
 including rationales. With "decisions" we mean selecting one alternative
 based on given criteria.
 
@@ -907,16 +937,16 @@ your decisions.
 
 Various options:
 
--   ADR ([Documenting Architecture
-    Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions))
-    for every important decision
+- ADR ([Documenting Architecture
+  Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions))
+  for every important decision
 
--   List or table, ordered by importance and consequences or:
+- List or table, ordered by importance and consequences or:
 
--   more detailed in form of separate sections per decision
+- more detailed in form of separate sections per decision
 
 See [Architecture Decisions](https://docs.arc42.org/section-9/) in the
-arc42 documentation. There you will find links and examples about ADR.
+arc42 documentation. There you will find links and examples about ADR.-->
 
 <div style="page-break-after: always;"></div>
 
@@ -977,10 +1007,10 @@ large number of quality requirements.
 The quality tree is a high-level overview of the quality goals and
 requirements:
 
--   tree-like refinement of the term "quality". Use "quality" or
-    "usefulness" as a root
+- tree-like refinement of the term "quality". Use "quality" or
+  "usefulness" as a root
 
--   a mind map with quality categories as main branches
+- a mind map with quality categories as main branches
 
 In any case the tree should include links to the scenarios of the
 following section.
@@ -1001,15 +1031,15 @@ the system.
 
 For architects, two kinds of scenarios are important:
 
--   Usage scenarios (also called application scenarios or use case
-    scenarios) describe the system’s runtime reaction to a certain
-    stimulus. This also includes scenarios that describe the system’s
-    efficiency or performance. Example: The system reacts to a user’s
-    request within one second.
+- Usage scenarios (also called application scenarios or use case
+  scenarios) describe the system’s runtime reaction to a certain
+  stimulus. This also includes scenarios that describe the system’s
+  efficiency or performance. Example: The system reacts to a user’s
+  request within one second.
 
--   Change scenarios describe a modification of the system or of its
-    immediate environment. Example: Additional functionality is
-    implemented or requirements for a quality attribute change.
+- Change scenarios describe a modification of the system or of its
+  immediate environment. Example: Additional functionality is
+  implemented or requirements for a quality attribute change.
 
 <div class="formalpara-title">
 
@@ -1039,11 +1069,27 @@ Tabular or free form text.
 
 <div class="formalpara-title">
 
-**Contents**
-
+<table border="1">
+    <tr>
+        <th>Risk/Technical Debt</th>
+        <th>Description</th>
+    </tr>
+    <tr>
+        <td>reliance on third-party service (Pixlr)</td>
+        <td>Pixlr downtime limits app's image editing functionality; Implement failover: multiple external services, local/hosted image editing backups.</td>
+    </tr>
+    <tr>
+        <td>Data security and privacy compliance</td>
+        <td>Security risks: data breaches, legal implications possible; Regular audits, encryption, access control, and policies</td>
+    </tr>
+    <tr>
+        <td>Performance reduction due to unoptimized image sharing</td>
+        <td>Performance reduction as the user base grows and image uploads increase; Utilize image compression techniques to decrease file sizes without compromising quality; Regular performance testing and optimization</td>
+    </tr>
+</table>
 </div>
-
-A list of identified technical risks or technical debts, ordered by
+</br>
+<!-- A list of identified technical risks or technical debts, ordered by
 priority
 
 <div class="formalpara-title">
@@ -1072,7 +1118,7 @@ measures to minimize, mitigate or avoid risks or reduce technical debts.
 See [Risks and Technical Debt](https://docs.arc42.org/section-11/) in
 the arc42 documentation.
 
-<div style="page-break-after: always;"></div>
+<div style="page-break-after: always;"></div> -->
 
 # Glossary
 
@@ -1096,9 +1142,9 @@ multi-language teams.
 
 You should clearly define your terms, so that all stakeholders
 
--   have an identical understanding of these terms
+- have an identical understanding of these terms
 
--   do not use synonyms and homonyms
+- do not use synonyms and homonyms
 
 A table with columns \<Term> and \<Definition>.
 
@@ -1108,6 +1154,6 @@ See [Glossary](https://docs.arc42.org/section-12/) in the arc42
 documentation.
 
 | Term        | Definition        |
-|-------------|-------------------|
-| *\<Term-1>* | *\<definition-1>* |
-| *\<Term-2>* | *\<definition-2>* |
+| ----------- | ----------------- |
+| _\<Term-1>_ | _\<definition-1>_ |
+| _\<Term-2>_ | _\<definition-2>_ |
