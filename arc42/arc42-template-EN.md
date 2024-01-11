@@ -788,39 +788,51 @@ _\<diagram + explanation>_
 ## 8. Cross-cutting Concepts
 
 ### 8.1 Domain Concepts
+
 Our application adopts a domain-driven design to allow developers and business experts to collaborate more efficiently.
 
 ### 8.2 User Experience (UX) Concepts
-- **Responsive Design** 
-- **Intuitive Navigation** 
-- **Error Handling** 
+
+- **Responsive Design**
+- **Intuitive Navigation**
+- **Error Handling**
 
 ### 8.3 Safety and Security Concepts
+
 We implement comprehensive authentication mechanisms, often considering OAuth2 for secure access management. Data protection is enhanced through:
+
 - **Encryption for sensitive data**
 - **Compliance to the Digital Service Act** TODO: look up other relevant laws?
 
 ### 8.4 Architecture and Design Patterns
+
 #### Frontend Using React Native
-- **Pattern:** TODO: MVC? Command pattern? 
+
+- **Pattern:** TODO: MVC? Command pattern?
 - **Component-Based Structure:** Reusable UI components and efficient state management.
 
 #### Backend Using Node.js
+
 - **Microservices Architecture for scalability and ease of maintanance**
 - **RESTful APIs for decoupling communication between frontend and backend services**
 
 ### 8.5 "Under-the-Hood"
+
 TODO: choose database. We use AWS for hosting, taking advantage of their scalability and reliability.
 
 ### 8.6 Development Concepts
+
 We adhere to **Agile methodologies**, encouraging iterative development and incorporating regular stakeholder feedback. Our development practices include:
+
 - **Git for Version Control and Peer-Reviews**
 - **CI/CD Pipelines with automated testing and deployment**
 
 ### 8.7 Operational Concepts
+
 Our operational strategy includes:
+
 - **Docker for Containerization**
-- **Robust Logging for error tracking and diagnosis** 
+- **Robust Logging for error tracking and diagnosis**
 
 <div style="page-break-after: always;"></div>
 
@@ -872,46 +884,6 @@ Our operational strategy includes:
 
 </div>
 
-<!-- Important, expensive, large scale or risky architecture decisions
-including rationales. With "decisions" we mean selecting one alternative
-based on given criteria.
-
-Please use your judgement to decide whether an architectural decision
-should be documented here in this central section or whether you better
-document it locally (e.g. within the white box template of one building
-block).
-
-Avoid redundancy. Refer to section 4, where you already captured the
-most important decisions of your architecture.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-Stakeholders of your system should be able to comprehend and retrace
-your decisions.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-Various options:
-
-- ADR ([Documenting Architecture
-  Decisions](https://cognitect.com/blog/2011/11/15/documenting-architecture-decisions))
-  for every important decision
-
-- List or table, ordered by importance and consequences or:
-
-- more detailed in form of separate sections per decision
-
-See [Architecture Decisions](https://docs.arc42.org/section-9/) in the
-arc42 documentation. There you will find links and examples about ADR.-->
-
 <div style="page-break-after: always;"></div>
 
 <hr>
@@ -919,116 +891,57 @@ arc42 documentation. There you will find links and examples about ADR.-->
 
 # 10. Quality Requirements
 
-<div class="formalpara-title">
-
-**Content**
-
-</div>
-
-This section contains all quality requirements as quality tree with
-scenarios. The most important ones have already been described in
-section 1.2. (quality goals)
-
-Here you can also capture quality requirements with lesser priority,
-which will not create high risks when they are not fully achieved.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-Since quality requirements will have a lot of influence on architectural
-decisions you should know for every stakeholder what is really important
-to them, concrete and measurable.
-
-See [Quality Requirements](https://docs.arc42.org/section-10/) in the
-arc42 documentation.
-
 ## 10.1. Quality Tree
 
 <div class="formalpara-title">
 
-**Content**
+![Hierarchy of building blocks](images/09_Quality_tree.png)
 
 </div>
-
-The quality tree (as defined in ATAM – Architecture Tradeoff Analysis
-Method) with quality/evaluation scenarios as leafs.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-The tree structure with priorities provides an overview for a sometimes
-large number of quality requirements.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-The quality tree is a high-level overview of the quality goals and
-requirements:
-
-- tree-like refinement of the term "quality". Use "quality" or
-  "usefulness" as a root
-
-- a mind map with quality categories as main branches
-
-In any case the tree should include links to the scenarios of the
-following section.
 
 ## 10.2. Quality Scenarios
 
 <div class="formalpara-title">
 
-**Contents**
+**Usability**
 
 </div>
 
-Concretization of (sometimes vague or implicit) quality requirements
-using (quality) scenarios.
+Scenario 1: A new user attempts to register and create a profile.
 
-These scenarios describe what should happen when a stimulus arrives at
-the system.
+The user has instaled the app and opened it for the first time. When the user navigates to the registration screen, the registration process should be easily understandable and the user should complete the registration process without assistance.
 
-For architects, two kinds of scenarios are important:
+Scenario 2: A user explores subscription options.
 
-- Usage scenarios (also called application scenarios or use case
-  scenarios) describe the system’s runtime reaction to a certain
-  stimulus. This also includes scenarios that describe the system’s
-  efficiency or performance. Example: The system reacts to a user’s
-  request within one second.
-
-- Change scenarios describe a modification of the system or of its
-  immediate environment. Example: Additional functionality is
-  implemented or requirements for a quality attribute change.
+An existing user is interested in premium features. When the user navigates to the subscription information section, the subscription options should be clearly presented, with differences between tiers easily understandable.
 
 <div class="formalpara-title">
 
-**Motivation**
+**Reliability**
 
 </div>
 
-Scenarios make quality requirements concrete and allow to more easily
-measure or decide whether they are fulfilled.
+Scenario 1: Handling high concurrent user load.
 
-Especially when you want to assess your architecture using methods like
-ATAM you need to describe your quality goals (from section 1.2) more
-precisely down to a level of scenarios that can be discussed and
-evaluated.
+A significant number of users are accessing the app simultaneously. When users are uploading, editing, and sharing images, the app should function smoothly without crashing or significant lag.
+
+Scenario 2: Recovering from a server failure.
+
+One of the servers hosting the app fails. The failure occurs during peak usage hours. Then the system should automatically reroute traffic to other servers, ensuring uninterrupted service for users.
 
 <div class="formalpara-title">
 
-**Form**
+**Performance**
 
 </div>
 
-Tabular or free form text.
+Scenario 1: Image upload and retrieval speed.
+
+A user selects a high-resolution image to upload. When the user uploads the image, it should be uploaded and available for viewing in a reasonable amount of time.
+
+Scenario 2: Response time during peak usage.
+
+The app is experiencing peak traffic. When a user performs an action requiring server response, the action should complete within a few seconds, even under high load.
 
 <div style="page-break-after: always;"></div>
 
