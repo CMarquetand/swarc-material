@@ -785,105 +785,42 @@ _\<diagram + explanation>_
 <hr>
 <br>
 
-# 8. Cross-cutting Concepts
+## 8. Cross-cutting Concepts
 
-<div class="formalpara-title">
+### 8.1 Domain Concepts
+Our application adopts a domain-driven design to allow developers and business experts to collaborate more efficiently.
 
-**Content**
+### 8.2 User Experience (UX) Concepts
+- **Responsive Design** 
+- **Intuitive Navigation** 
+- **Error Handling** 
 
-</div>
+### 8.3 Safety and Security Concepts
+We implement comprehensive authentication mechanisms, often considering OAuth2 for secure access management. Data protection is enhanced through:
+- **Encryption for sensitive data**
+- **Compliance to the Digital Service Act** TODO: look up other relevant laws?
 
-This section describes overall, principal regulations and solution ideas
-that are relevant in multiple parts (= cross-cutting) of your system.
-Such concepts are often related to multiple building blocks. They can
-include many different topics, such as
+### 8.4 Architecture and Design Patterns
+#### Frontend Using React Native
+- **Pattern:** TODO: MVC? Command pattern? 
+- **Component-Based Structure:** Reusable UI components and efficient state management.
 
-- models, especially domain models
+#### Backend Using Node.js
+- **Microservices Architecture for scalability and ease of maintanance**
+- **RESTful APIs for decoupling communication between frontend and backend services**
 
-- architecture or design patterns
+### 8.5 "Under-the-Hood"
+TODO: choose database. We use AWS for hosting, taking advantage of their scalability and reliability.
 
-- rules for using specific technology
+### 8.6 Development Concepts
+We adhere to **Agile methodologies**, encouraging iterative development and incorporating regular stakeholder feedback. Our development practices include:
+- **Git for Version Control and Peer-Reviews**
+- **CI/CD Pipelines with automated testing and deployment**
 
-- principal, often technical decisions of an overarching (=
-  cross-cutting) nature
-
-- implementation rules
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-Concepts form the basis for _conceptual integrity_ (consistency,
-homogeneity) of the architecture. Thus, they are an important
-contribution to achieve inner qualities of your system.
-
-Some of these concepts cannot be assigned to individual building blocks,
-e.g. security or safety.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-The form can be varied:
-
-- concept papers with any kind of structure
-
-- cross-cutting model excerpts or scenarios using notations of the
-  architecture views
-
-- sample implementations, especially for technical concepts
-
-- reference to typical usage of standard frameworks (e.g. using
-  Hibernate for object/relational mapping)
-
-<div class="formalpara-title">
-
-**Structure**
-
-</div>
-
-A potential (but not mandatory) structure for this section could be:
-
-- Domain concepts
-
-- User Experience concepts (UX)
-
-- Safety and security concepts
-
-- Architecture and design patterns
-
-- "Under-the-hood"
-
-- development concepts
-
-- operational concepts
-
-Note: it might be difficult to assign individual concepts to one
-specific topic on this list.
-
-![Possible topics for crosscutting
-concepts](images/08-Crosscutting-Concepts-Structure-EN.png)
-
-See [Concepts](https://docs.arc42.org/section-8/) in the arc42
-documentation.
-
-## _\<Concept 1>_
-
-_\<explanation>_
-
-## _\<Concept 2>_
-
-_\<explanation>_
-
-…
-
-## _\<Concept n>_
-
-_\<explanation>_
+### 8.7 Operational Concepts
+Our operational strategy includes:
+- **Docker for Containerization**
+- **Robust Logging for error tracking and diagnosis** 
 
 <div style="page-break-after: always;"></div>
 
