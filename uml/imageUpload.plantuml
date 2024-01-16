@@ -1,0 +1,18 @@
+@startuml Image Upload Advanced Filters
+    title Image Upload Advanced Filters
+    
+    actor User
+    participant "User API (gatekeeper)" as U
+    participant "Image API" as I
+    participant "Image Processing" as IP
+    participant "Pixlr API" as P
+    database "Cloud Storage" as FS
+
+    User -> U: upload image
+    U -> I: forward image
+    I -> IP: initiate processing
+    IP -> P: send to Pixlr
+    P -> IP: return processed image
+    IP -> FS: store image
+    FS -> User: confirm storage
+@enduml

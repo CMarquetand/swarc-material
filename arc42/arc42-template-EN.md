@@ -654,18 +654,15 @@ There are many notations for describing scenarios, e.g.
 See [Runtime View](https://docs.arc42.org/section-6/) in the arc42
 documentation.
 
-## \<Runtime Scenario 1>
+## User with subscription uploads an image and edits it with Pixlr
 
-- _\<insert runtime diagram or textual description of the scenario>_
+![Sequence diagram of image upload](images/image_upload.png)
 
-- _\<insert description of the notable aspects of the interactions
-  between the building block instances depicted in this diagram.>_
+- The User API acts as a gatekeeper to ensure the user has a valid subscription
 
-## \<Runtime Scenario 2>
+## User updates their profile
 
-## …
-
-## \<Runtime Scenario n>
+![Sequence diagram of profile update](images/profile_update.png)
 
 <div style="page-break-after: always;"></div>
 

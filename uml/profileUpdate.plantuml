@@ -1,0 +1,18 @@
+@startuml User Profile Update
+    title User Profile Update
+
+    actor User
+    participant "User API" as U
+    participant "User Profile" as UP
+    participant "User Data" as UD
+    database "Cloud Storage" as CS
+
+    User -> U: request profile update
+    U -> UP: validate request
+    UP -> UD: update profile data
+    UD -> CS: store updated data
+    CS --> UD: confirm storage
+    UD --> UP: confirm update
+    UP --> U: confirm update
+    U --> User: notify update
+@enduml
