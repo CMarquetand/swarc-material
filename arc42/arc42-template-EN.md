@@ -440,31 +440,21 @@ dependencies (relationships, associations, …)
 This view is mandatory for every architecture documentation. In analogy
 to a house this is the _floor plan_.
 
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-Maintain an overview of your source code by making its structure
-understandable through abstraction.
-
-This allows you to communicate with your stakeholder on an abstract
-level without disclosing implementation details.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-The building block view is a hierarchical collection of black boxes and
-white boxes (see figure below) and their descriptions.
-
-![Hierarchy of building blocks](images/05_building_blocks-EN.png)
 
 **Level 1** is the white box description of the overall system together
 with black box descriptions of all contained building blocks.
+
+![Building Block View Level 1](images/05_level1.png)
+
+| Image                 | description|
+| --------------------------- | -------------------------------------------- |
+|Image processing | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation. <br> It provides an "Image API" to interact with the image processing functionalities, enabling seamless integration and data exchange. <br> And it provides the "Pxlr API" integrated for advanced image editing and processing capabilities, enriching the app's image manipulation features. |
+| User profile | The "User Profile" component manages user account information, preferences, and settings, offering a personalized user experience. <br> The "User API" provides a gateway to access and manage user profile data, ensuring a consistent and secure user data handling. |
+| Notifications | The "Notifications" component is responsible for generating and delivering alerts and messages to users based on their activities and preferences. <br> The "Notification API" facilitates the integration of various notification services, allowing for customizable and responsive user notifications.|
+| Images | The "Images" component is dedicated to storing and retrieving image files, optimized for high-volume and large-size image data handling.|
+|User data | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy|
+|Image Metadata | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy.|
+|Files system storage | The "File System Storage" component is the primary data storage solution, designed for robust, scalable, and secure storage of app data, including images and metadata. <br> The "Cloud Storage API" enables the app to interact with cloud-based storage solutions, providing scalable and efficient data storage options.|
 
 **Level 2** zooms into some building blocks of level 1. Thus it contains
 the white box description of selected building blocks of level 1,
