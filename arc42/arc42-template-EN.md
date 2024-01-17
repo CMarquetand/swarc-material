@@ -548,15 +548,17 @@ There are many notations for describing scenarios, e.g.
 See [Runtime View](https://docs.arc42.org/section-6/) in the arc42
 documentation.
 
-## User with subscription uploads an image and edits it with Pixlr
+## User with uploads an image
 
-![Sequence diagram of image upload](images/image_upload.png)
+![Sequence diagram of image upload](images/Upload_seq.png)
 
-- The User API acts as a gatekeeper to ensure the user has a valid subscription
+- The User API acts as a gatekeeper to ensure the user is valid
 
-## User updates their profile
+## User edits an image with Pixlr and uploads it
 
-![Sequence diagram of profile update](images/profile_update.png)
+![Sequence diagram of profile update](images/Pixlr_seq.png)
+
+- The User API acts as a gatekeeper to ensure the user is valid and has a subscription
 
 <div style="page-break-after: always;"></div>
 
