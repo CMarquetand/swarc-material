@@ -307,8 +307,46 @@ together with a mapping table showing the relationships between channels
 and input/output.
 
 **\<Diagram or Table>**
+## 3.2. Technical Context
 
-**\<optionally: Explanation of technical interfaces>**
+## Technical Context / explanation of Interfaces
+
+<table border="1">
+    <tr>
+        <th>Interface</th>
+        <th>Description</th>
+        <th>I/O</th>
+    </tr>
+    <td><b>User API</b></td>
+        <td>Handles user authentication, profile management, and other</td>
+        <td>REST requests</td>
+    </tr>
+    <tr>
+        <td><b>Image API</b></td>
+        <td>Handles image upload, retrieval, and basic image operations via RESTful services</td>
+        <td>REST requests</td>
+    </tr>
+    <tr>
+        <td><b>Pixlr API</b></td>
+        <td>Handles Pixlr (external service) for advanced image editing</td>
+        <td>in: Images<br>out: Edited images</td>
+    </tr>
+    <tr>
+        <td><b>Cloud Storage API</b></td>
+        <td>Handles the storage and retrieval of images and user data</td>
+        <td>REST requests</td>
+    </tr>
+    <tr>
+        <td><b>Notification API</b></td>
+        <td>Handles sending notifications to users</td>
+        <td>REST requests?</td>
+    </tr>
+    <tr>
+        <td><b>Mobile App</b></td>
+        <td>The frontend application running on user devices</td>
+        <td>REST requests</td>
+    </tr>
+</table>
 
 **\<Mapping Input/Output to Channels>**
 
