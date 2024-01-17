@@ -307,6 +307,7 @@ together with a mapping table showing the relationships between channels
 and input/output.
 
 **\<Diagram or Table>**
+
 ## 3.2. Technical Context
 
 ## Technical Context / explanation of Interfaces
@@ -425,30 +426,27 @@ documentation.
 
 # 5. Building Block View
 
-
 ## 5.1. Whitebox Overall System
-
-
 
 ![Building Block View Level 1](images/05_level1.png)
 <br>
 
 **Contained blackboxes**
 
-| Components                 | Description|
-| --------------------------- | -------------------------------------------- |
-|Image processing | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation. |
-| User profile | The "User Profile" component manages user account information, preferences, and settings, offering a personalized user experience. |
-| Notifications | The "Notifications" component is responsible for generating and delivering alerts and messages to users based on their activities and preferences. |
-| Images | The "Images" component is dedicated to storing and retrieving image files, optimized for high-volume and large-size image data handling.|
-|User data | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy|
-|Image Metadata | The "Image Metadata" component manages information related to images, such as tags, descriptions, and ownership details, facilitating efficient image categorization and searchability.|
-|Files system storage | The "File System Storage" component is the primary data storage solution, designed for robust, scalable, and secure storage of app data, including images and metadata.|
+| Components           | Description                                                                                                                                                                             |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Image processing     | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation.                                 |
+| User profile         | The "User Profile" component manages user account information, preferences, and settings, offering a personalized user experience.                                                      |
+| Notifications        | The "Notifications" component is responsible for generating and delivering alerts and messages to users based on their activities and preferences.                                      |
+| Images               | The "Images" component is dedicated to storing and retrieving image files, optimized for high-volume and large-size image data handling.                                                |
+| User data            | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy       |
+| Image Metadata       | The "Image Metadata" component manages information related to images, such as tags, descriptions, and ownership details, facilitating efficient image categorization and searchability. |
+| Files system storage | The "File System Storage" component is the primary data storage solution, designed for robust, scalable, and secure storage of app data, including images and metadata.                 |
 
 <br>
 
 **Interfaces**
-| Interfaces                | Description|
+| Interfaces | Description|
 | --------------------------- | -------------------------------------------- |
 |Image API| The "Image API" serves as an interface to interact with the image processing functionalities, enabling seamless integration and data exchange.|
 |Pxlr API| The "Pixlr API" is integrated for advanced image editing and processing capabilities, enriching the app's image manipulation features.|
@@ -459,32 +457,30 @@ documentation.
 <br>
 
 ## 5.2. Level 2 - Image Processing (Whitebox)
+
 ![Building Block View Level 2](images/05_level2.png)
 
 <br>
 
-**Contained blackboxes** 
+**Contained blackboxes**
 
-| Components                 | Description|
-| --------------------------- | -------------------------------------------- |
-| Image processing Queue | The "Image Processing Queue" efficiently organizes and prioritizes image processing tasks, ensuring orderly and timely handling of image manipulations.|
-| Image Controller | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components.  |
-| pixlr | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application. |
-| Image Repository| The "Image Repository" is responsible for the storage and retrieval of images and the image data management.|
-
-
-
+| Components             | Description                                                                                                                                                                   |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Image processing Queue | The "Image Processing Queue" efficiently organizes and prioritizes image processing tasks, ensuring orderly and timely handling of image manipulations.                       |
+| Image Controller       | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components. |
+| pixlr                  | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application.                                     |
+| Image Repository       | The "Image Repository" is responsible for the storage and retrieval of images and the image data management.                                                                  |
 
 ## 5.3. Level 3 - Image Controller (Whitebox)
 
 ![Building Block View ImageController](images/05_ImageControllerComponents.png)
 <br>
-| Class                 | Description|
+| Class | Description|
 | --------------------------- | -------------------------------------------- |
 |RequestHandler | **Purpose**: Manages incoming image processing requests.<br>**Responsibilities**: Validates requests, parses parameters, and routes them to the appropriate service or queue.|
 |Task Manager|**Purpose**: handles scheduling and dispatching of tasks, making it the central point for task management. <br>**Responsibilities**: Organizes and assigns image processing tasks, manages the processing workflow, and oversees task execution based on system load and priorities.|
 |Response and Resource Coordinator| **Purpose**: takes care of assembling responses and managing resources, streamlining post-processing operations. <br>**Responsibilities**: Assembles and delivers processed image responses while managing system resources (like memory and processor usage) and handling post-processing resource cleanup.|
-|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.| 
+|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.|
 |Configuration Manager | **Purpose**: Handles configuration settings for the Image Controller. <br>**Responsibilities**: Manages settings related to processing algorithms, API integrations, and operational parameters.|
 |API Interface | **Purpose**: Serves as the interface for communication with other system components or external APIs. <br>**Responsibilities**: Translates internal processing results to API responses, and vice versa for incoming requests.|
 
@@ -903,38 +899,16 @@ the arc42 documentation.
 
 # 12. Glossary
 
-<div class="formalpara-title">
-
-**Contents**
-
-</div>
-
-The most important domain and technical terms that your stakeholders use
-when discussing the system.
-
-You can also see the glossary as source for translations if you work in
-multi-language teams.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-You should clearly define your terms, so that all stakeholders
-
-- have an identical understanding of these terms
-
-- do not use synonyms and homonyms
-
-A table with columns \<Term> and \<Definition>.
-
-Potentially more columns in case you need translations.
-
-See [Glossary](https://docs.arc42.org/section-12/) in the arc42
-documentation.
-
-| Term        | Definition        |
-| ----------- | ----------------- |
-| _\<Term-1>_ | _\<definition-1>_ |
-| _\<Term-2>_ | _\<definition-2>_ |
+| Term                                   | Definition                                                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Asyncronous Image Loading with Caching | _A technique where images are loaded independently of the main program flow, allowing the user interface to remain responsive. Caching stores previously loaded images for quicker access in future requests, reducing loading times and server load._                                                                                                                                                     |
+| Caching strategy                       | _A method used to store frequently accessed data temporarily in a readily accessible location, improving response time and reducing the load on the primary data source._                                                                                                                                                                                                                                  |
+| Content Delivery Network (CDN)         | _A global network of servers strategically positioned to deliver web content like images, videos, and web pages to users more efficiently. When a user requests content, the CDN redirects the request to the nearest server, reducing the distance the data travels, thus minimizing latency and speeding up loading times. This helps in handling high traffic loads and improving website performance._ |
+| Load Balancing                         | _A process used in network and server architectures where incoming requests or network traffic is distributed evenly across multiple servers or resources. This ensures no single server becomes overwhelmed, leading to improved response times and reliability._                                                                                                                                         |
+| Microservices                          | _An architectural approach that structures an application as a collection of small, independent services. Each service is focused on a specific function and communicates with other services through well-defined APIs. This approach enables easier scaling, maintenance, and faster deployment of individual components._                                                                               |
+| Monolithic                             | _An architectural style where an application is built as a single, unified unit. In a monolithic architecture, all components of the application – such as the user interface, business logic, and data access layer – are tightly integrated and deployed as one entity. This approach can simplify development and deployment initially but may become complex and unwieldy as the application grows._   |
+| Performance                            | _Refers to how well a software system meets its non-functional requirements related to speed, responsiveness, and efficiency. In software architecture, performance encompasses design considerations that affect how quickly and effectively a system processes data, handles load, and responds to user interactions._                                                                                   |
+| Reliability                            | _The measure of a software system's ability to perform its intended functions consistently and accurately over time, under specified conditions. It involves aspects like fault tolerance, error handling, and system availability, ensuring that the system remains operational and dependable, even in the face of failures or unexpected conditions._                                                   |
+| Single Server with Failover Mechanism  | _A setup where a primary server handles all requests under normal conditions, and in case of its failure, a failover mechanism automatically redirects traffic to a backup server. This ensures continuous service availability, albeit with potential limitations in scalability and performance compared to multi-server configurations._                                                                |
+| Syncronous Image Loading               | _A process where images are loaded in a sequential manner, with each image request being processed and completed before the next one begins. This approach can cause delays in user interface responsiveness, as the system waits for each image to load completely before proceeding with other tasks._                                                                                                   |
+| Usability                              | _Refers to the ease with which users can effectively interact with a software system. In software architecture, usability encompasses designing interfaces and workflows that are intuitive, accessible, and provide a positive user experience. _                                                                                                                                                         |
