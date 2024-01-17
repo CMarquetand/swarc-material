@@ -1,0 +1,51 @@
+@startuml ImageControllerComponents
+
+skinparam linetype ortho
+
+package "Image Controller" {
+
+    class RequestHandler {
+        + validateRequests()
+        + parseParameters()
+        + routeRequests()
+    }
+
+    class TaskManager {
+        + organizeTasks()
+        + assignTasks()
+        + manageProcessingWorkflow()
+    }
+
+    class ResponseAndResourceCoordinator {
+        + assembleResponses()
+        + manageSystemResources()
+        + handleResourceCleanup()
+    }
+
+    class MonitoringAndLogging {
+        + logActivity()
+        + trackPerformanceMetrics()
+        + alertAdministrators()
+    }
+
+
+    class ConfigurationManager {
+        + manageProcessingSettings()
+        + manageAPIIntegrations()
+        + handleOperationalParameters()
+    }
+
+    class APIInterface {
+        + translateToAPIResponses()
+        + handleIncomingRequests()
+    }
+
+    ' Connections
+    RequestHandler --  TaskManager : validates -> schedules
+    TaskManager -- ResponseAndResourceCoordinator : assembles & manages resources
+    RequestHandler -- MonitoringAndLogging : monitors requests
+    RequestHandler -- ConfigurationManager : configures settings
+    RequestHandler -- APIInterface : interfaces with API
+}
+
+@enduml

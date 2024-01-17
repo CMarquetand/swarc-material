@@ -425,198 +425,68 @@ documentation.
 
 # 5. Building Block View
 
-<div class="formalpara-title">
-
-**Content**
-
-</div>
-
-The building block view shows the static decomposition of the system
-into building blocks (modules, components, subsystems, classes,
-interfaces, packages, libraries, frameworks, layers, partitions, tiers,
-functions, macros, operations, data structures, …) as well as their
-dependencies (relationships, associations, …)
-
-This view is mandatory for every architecture documentation. In analogy
-to a house this is the _floor plan_.
-
-
-**Level 1** is the white box description of the overall system together
-with black box descriptions of all contained building blocks.
-
-![Building Block View Level 1](images/05_level1.png)
-
-| Image                 | description|
-| --------------------------- | -------------------------------------------- |
-|Image processing | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation. <br> It provides an "Image API" to interact with the image processing functionalities, enabling seamless integration and data exchange. <br> And it provides the "Pxlr API" integrated for advanced image editing and processing capabilities, enriching the app's image manipulation features. |
-| User profile | The "User Profile" component manages user account information, preferences, and settings, offering a personalized user experience. <br> The "User API" provides a gateway to access and manage user profile data, ensuring a consistent and secure user data handling. |
-| Notifications | The "Notifications" component is responsible for generating and delivering alerts and messages to users based on their activities and preferences. <br> The "Notification API" facilitates the integration of various notification services, allowing for customizable and responsive user notifications.|
-| Images | The "Images" component is dedicated to storing and retrieving image files, optimized for high-volume and large-size image data handling.|
-|User data | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy|
-|Image Metadata | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy.|
-|Files system storage | The "File System Storage" component is the primary data storage solution, designed for robust, scalable, and secure storage of app data, including images and metadata. <br> The "Cloud Storage API" enables the app to interact with cloud-based storage solutions, providing scalable and efficient data storage options.|
-
-**Level 2** zooms into some building blocks of level 1. Thus it contains
-the white box description of selected building blocks of level 1,
-together with black box descriptions of their internal building blocks.
-
-**Level 3** zooms into selected building blocks of level 2, and so on.
-
-See [Building Block View](https://docs.arc42.org/section-5/) in the
-arc42 documentation.
 
 ## 5.1. Whitebox Overall System
 
-Here you describe the decomposition of the overall system using the
-following white box template. It contains
 
-- an overview diagram
 
-- a motivation for the decomposition
+![Building Block View Level 1](images/05_level1.png)
+<br>
 
-- black box descriptions of the contained building blocks. For these
-  we offer you alternatives:
+**Contained blackboxes**
 
-  - use _one_ table for a short and pragmatic overview of all
-    contained building blocks and their interfaces
+| Components                 | Description|
+| --------------------------- | -------------------------------------------- |
+|Image processing | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation. |
+| User profile | The "User Profile" component manages user account information, preferences, and settings, offering a personalized user experience. |
+| Notifications | The "Notifications" component is responsible for generating and delivering alerts and messages to users based on their activities and preferences. |
+| Images | The "Images" component is dedicated to storing and retrieving image files, optimized for high-volume and large-size image data handling.|
+|User data | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy|
+|Image Metadata | The "Image Metadata" component manages information related to images, such as tags, descriptions, and ownership details, facilitating efficient image categorization and searchability.|
+|Files system storage | The "File System Storage" component is the primary data storage solution, designed for robust, scalable, and secure storage of app data, including images and metadata.|
 
-  - use a list of black box descriptions of the building blocks
-    according to the black box template (see below). Depending on
-    your choice of tool this list could be sub-chapters (in text
-    files), sub-pages (in a Wiki) or nested elements (in a modeling
-    tool).
+<br>
 
-- (optional:) important interfaces, that are not explained in the
-  black box templates of a building block, but are very important for
-  understanding the white box. Since there are so many ways to specify
-  interfaces why do not provide a specific template for them. In the
-  worst case you have to specify and describe syntax, semantics,
-  protocols, error handling, restrictions, versions, qualities,
-  necessary compatibilities and many things more. In the best case you
-  will get away with examples or simple signatures.
+**Interfaces**
+| Interfaces                | Description|
+| --------------------------- | -------------------------------------------- |
+|Image API| The "Image API" serves as an interface to interact with the image processing functionalities, enabling seamless integration and data exchange.|
+|Pxlr API| The "Pixlr API" is integrated for advanced image editing and processing capabilities, enriching the app's image manipulation features.|
+|User API | The "User API" provides a gateway to access and manage user profile data, ensuring a consistent and secure user data handling.|
+|Notifications API | The "Notification API" facilitates the integration of various notification services, allowing for customizable and responsive user notifications.|
+|Cloud Storage API| The "Cloud Storage API" enables the app to interact with cloud-based storage solutions, providing scalable and efficient data storage options.|
 
-**_\<Overview Diagram>_**
+<br>
 
-Motivation  
-_\<text explanation>_
+## 5.2. Level 2 - Image Processing (Whitebox)
+![Building Block View Level 2](images/05_level2.png)
 
-Contained Building Blocks  
-_\<Description of contained building block (black boxes)>_
+<br>
 
-Important Interfaces  
-_\<Description of important interfaces>_
+**Contained blackboxes** 
 
-Insert your explanations of black boxes from level 1:
+| Components                 | Description|
+| --------------------------- | -------------------------------------------- |
+| Image processing Queue | The "Image Processing Queue" efficiently organizes and prioritizes image processing tasks, ensuring orderly and timely handling of image manipulations.|
+| Image Controller | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components.  |
+| pixlr | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application. |
+| Image Repository| The "Image Repository" is responsible for the storage and retrieval of images and the image data management.|
 
-If you use tabular form you will only describe your black boxes with
-name and responsibility according to the following schema:
 
-| **Name**         | **Responsibility** |
-| ---------------- | ------------------ |
-| _\<black box 1>_ |  *\<Text>*         |
-| _\<black box 2>_ |  *\<Text>*         |
 
-If you use a list of black box descriptions then you fill in a separate
-black box template for every important building block . Its headline is
-the name of the black box.
 
-### \<Name black box 1>
+## 5.3. Level 3 - Image Controller (Whitebox)
 
-Here you describe \<black box 1> according the the following black box
-template:
-
-- Purpose/Responsibility
-
-- Interface(s), when they are not extracted as separate paragraphs.
-  This interfaces may include qualities and performance
-  characteristics.
-
-- (Optional) Quality-/Performance characteristics of the black box,
-  e.g.availability, run time behavior, ….
-
-- (Optional) directory/file location
-
-- (Optional) Fulfilled requirements (if you need traceability to
-  requirements).
-
-- (Optional) Open issues/problems/risks
-
-_\<Purpose/Responsibility>_
-
-_\<Interface(s)>_
-
-_\<(Optional) Quality/Performance Characteristics>_
-
-_\<(Optional) Directory/File Location>_
-
-_\<(Optional) Fulfilled Requirements>_
-
-_\<(optional) Open Issues/Problems/Risks>_
-
-### \<Name black box 2>
-
-_\<black box template>_
-
-### \<Name black box n>
-
-_\<black box template>_
-
-### \<Name interface 1>
-
-…
-
-### \<Name interface m>
-
-## 5.2. Level 2
-
-Here you can specify the inner structure of (some) building blocks from
-level 1 as white boxes.
-
-You have to decide which building blocks of your system are important
-enough to justify such a detailed description. Please prefer relevance
-over completeness. Specify important, surprising, risky, complex or
-volatile building blocks. Leave out normal, simple, boring or
-standardized parts of your system
-
-### White Box _\<building block 1>_
-
-…describes the internal structure of _building block 1_.
-
-_\<white box template>_
-
-### White Box _\<building block 2>_
-
-_\<white box template>_
-
-…
-
-### White Box _\<building block m>_
-
-_\<white box template>_
-
-## 5.3. Level 3
-
-Here you can specify the inner structure of (some) building blocks from
-level 2 as white boxes.
-
-When you need more detailed levels of your architecture please copy this
-part of arc42 for additional levels.
-
-### White Box \<\_building block x.1\_\>
-
-Specifies the internal structure of _building block x.1_.
-
-_\<white box template>_
-
-### White Box \<\_building block x.2\_\>
-
-_\<white box template>_
-
-### White Box \<\_building block y.1\_\>
-
-_\<white box template>_
-
-<div style="page-break-after: always;"></div>
+![Building Block View ImageController](images/05_ImageControllerComponents.png)
+<br>
+| Class                 | Description|
+| --------------------------- | -------------------------------------------- |
+|RequestHandler | **Purpose**: Manages incoming image processing requests.<br>**Responsibilities**: Validates requests, parses parameters, and routes them to the appropriate service or queue.|
+|Task Manager|**Purpose**: handles scheduling and dispatching of tasks, making it the central point for task management. <br>**Responsibilities**: Organizes and assigns image processing tasks, manages the processing workflow, and oversees task execution based on system load and priorities.|
+|Response and Resource Coordinator| **Purpose**: takes care of assembling responses and managing resources, streamlining post-processing operations. <br>**Responsibilities**: Assembles and delivers processed image responses while managing system resources (like memory and processor usage) and handling post-processing resource cleanup.|
+|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.| 
+|Configuration Manager | **Purpose**: Handles configuration settings for the Image Controller. <br>**Responsibilities**: Manages settings related to processing algorithms, API integrations, and operational parameters.|
+|API Interface | **Purpose**: Serves as the interface for communication with other system components or external APIs. <br>**Responsibilities**: Translates internal processing results to API responses, and vice versa for incoming requests.|
 
 <hr>
 <br>
