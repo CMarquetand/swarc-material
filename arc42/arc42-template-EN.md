@@ -576,11 +576,11 @@ documentation.
 
 | Node                 | Description|
 | --------------------------- | -------------------------------------------- |
-|Development Environment||
-|Mobile Device||
-|Server - backend processing||
-|Cloud||
-|pxlr Server||
+|Development Environment|React Native is used for building the mobile frontend, offering a cross-platform framework for mobile app development. Node.js is likely used for backend development, providing a scalable and efficient environment for server-side programming.|
+|Mobile Device|client-side of the application that runs on users' mobile devices. It includes the frontend interface of the application where users interact. |
+|Server - backend processing|central server of the application. It handles the backend processing, including business logic, user authentication, database interactions, and integration with other services like the Pixlr server. It processes requests from the mobile frontend and communicates with the cloud storage and other services as needed.|
+|Cloud|cloud-based storage services is used for storing data that the application needs e.g. user data, images|
+|pxlr Server|external server that processes image-related requests from the main server|
 
 
 <hr>
