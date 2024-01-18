@@ -463,17 +463,14 @@ documentation.
 
 <br>
 
-**Contained blackboxes** 
+**Contained blackboxes**
 
-| Components                 | Description|
-| --------------------------- | -------------------------------------------- |
-| Image processing Queue | The "Image Processing Queue" efficiently organizes and prioritizes image processing tasks, ensuring orderly and timely handling of image manipulations.|
-| Image Controller | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components.  |
-| pixlr | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application. |
-| Image Repository| The "Image Repository" is responsible for the storage and retrieval of images and the image data management.|
-
-
-
+| Components             | Description                                                                                                                                                                   |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Image processing Queue | The "Image Processing Queue" efficiently organizes and prioritizes image processing tasks, ensuring orderly and timely handling of image manipulations.                       |
+| Image Controller       | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components. |
+| pixlr                  | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application.                                     |
+| Image Repository       | The "Image Repository" is responsible for the storage and retrieval of images and the image data management.                                                                  |
 
 ## 5.3. Level 3 - Image Controller (Whitebox)
 
@@ -552,7 +549,7 @@ There are many notations for describing scenarios, e.g.
 See [Runtime View](https://docs.arc42.org/section-6/) in the arc42
 documentation.
 
-## User with subscription uploads an image
+## User with uploads an image
 
 ![Sequence diagram of image upload](images/Upload_seq.png)
 
@@ -581,6 +578,7 @@ documentation.
 |Server - backend processing|central server of the application. It handles the backend processing, including business logic, user authentication, database interactions, and integration with other services like the Pixlr server. It processes requests from the mobile frontend and communicates with the cloud storage and other services as needed.|
 |Cloud|cloud-based storage services is used for storing data that the application needs e.g. user data, images|
 |pxlr Server|external server that processes image-related requests from the main server|
+
 
 
 <hr>
