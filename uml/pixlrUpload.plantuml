@@ -1,0 +1,22 @@
+@startuml Edit image with Pixlr
+    title Edit image with Pixlr
+
+    actor User
+    participant "User API (gatekeeper)" as U
+    participant "Image API" as I
+    participant "Pixlr API" as P
+    participant "Image Processing" as IP
+    database "User's Device" as Device
+    database "Cloud Storage" as FS
+
+    User -> U: Select image for editing
+    U -> I: Forward edit request
+    I -> P: Open Pixlr with image
+    P -> User: Provide editing tools
+    User -> P: Edit and save image
+    P -> Device: Save edited image locally
+    User -> U: Select edited image for upload
+    U -> IP: Validate upload request
+    IP -> FS: Store edited image
+    FS -> User: Confirm storage
+@enduml

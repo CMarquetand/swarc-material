@@ -64,9 +64,9 @@ Table 1. Quality Goals
 
 | Priority | Quality     | Motivation                                                                                                                    |
 | -------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 1        | Usability   | The app must be user-friendly and easy to navigate The subscription model must be clearly communicated and easy to understand |
-| 2        | Reliability | The app must be stable and function without significant bugs or errors                                                        |
-| 3        | Performance | The app must be optimized for performance and load times                                                                      |
+| 1        | [Usability](#Usability)   | The app must be user-friendly and easy to navigate The subscription model must be clearly communicated and easy to understand |
+| 2        | [Reliability](#Reliability) | The app must be stable and function without significant bugs or errors                                                        |
+| 3        | [Performance](#Performance) | The app must be optimized for [performance](#Performance) and load times                                                                      |
 
 </div>
 
@@ -83,8 +83,8 @@ Table 2. Stakeholders
 | Marketing Manager, Sarah Chen, Bold Branding Agency        | Expecting that the features of the application match the needs of the market, that the app is attractive to the target audience so that commercialisation and marketing campaigns are successful.             |
 | Project Manager, Michael Nguyen, Digital Dreams Inc.       | Expecting that the development of the app meets the timeframe and scope to manage deadlines, meetings and costs; Management of optimal use of resources; Focus on communication and collaboration of the team |
 | Lead Developer, Ava Patel, Pixel Perfect Solutions         | High quality of application development, clear idea of the architecture, clear documentation; Prioritizing quality goals in application development;                                                          |
-| UX/UI Designer, Emily Wong, Creative Co.                   | intuitive and attractive user interface with a focus on usability                                                                                                                                             |
-| User Representative, Samir Singh, Photography Enthusiast   | easy and intuitive usability, users' wishes are fulfilled, high reliability (no crashes or errors)                                                                                                            |
+| UX/UI Designer, Emily Wong, Creative Co.                   | intuitive and attractive user interface with a focus on [usability](#Usability)                                                                                                                                             |
+| User Representative, Samir Singh, Photography Enthusiast   | easy and intuitive [usability](#Usability), users' wishes are fulfilled, high [reliability](#Reliability) (no crashes or errors)                                                                                                            |
 | Photography Expert, Lucas Rodriguez, Snap & Shoot Magazine | Testing the application and ensuring that the specific features of the application meet the needs of professional photographers.                                                                              |
 
 </div>
@@ -236,7 +236,7 @@ documentation.
         <td>UX/UI Designer</td>
         <td>UI/UX Design, Design Tools</td>
         <td>Design mockups, User feedback</td>
-        <td>UI/UX improvements, usability metrics</td>
+        <td>UI/UX improvements, <a href="#Usability">usability</a> metrics</td>
     </tr>
 </table>
 
@@ -307,6 +307,7 @@ together with a mapping table showing the relationships between channels
 and input/output.
 
 **\<Diagram or Table>**
+
 ## 3.2. Technical Context
 
 ## Technical Context / explanation of Interfaces
@@ -366,15 +367,15 @@ and input/output.
     </tr>
     <tr>
         <td>Scalability</td>
-        <td>Microservices</td>
+        <td><a href="#Microservices">Microservices</a></td>
     </tr>
     <tr>
-        <td>Performance</td>
-        <td>Caching Strategies and Content Delivery Networks (CDN)</td>
+        <td><a href="#Performance">Performance</a></td>
+        <td><a href="#Caching strategy">Caching Strategies</a> and <a href="#Content Delivery Network (CDN)">Content Delivery Networks (CDN)</a></td>
     </tr>
     <tr>
-        <td>Reliability</td>
-        <td>Redundancy and Load Balancing</td>
+        <td><a href="#Reliability">Reliability</a></td>
+        <td>Redundancy and <a href="#Load Balancing">Load Balancing</a></td>
     </tr>
 </table>
 
@@ -459,32 +460,30 @@ documentation.
 <br>
 
 ## 5.2. Level 2 - Image Processing (Whitebox)
+
 ![Building Block View Level 2](images/05_level2.png)
 
 <br>
 
-**Contained blackboxes** 
+**Contained blackboxes**
 
-| Components                 | Description|
-| --------------------------- | -------------------------------------------- |
-| Image processing Queue | The "Image Processing Queue" efficiently organizes and prioritizes image processing tasks, ensuring orderly and timely handling of image manipulations.|
-| Image Controller | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components.  |
-| pixlr | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application. |
-| Image Repository| The "Image Repository" is responsible for the storage and retrieval of images and the image data management.|
-
-
-
+| Components             | Description                                                                                                                                                                   |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Image processing Queue | The "Image Processing Queue" efficiently organizes and prioritizes image processing tasks, ensuring orderly and timely handling of image manipulations.                       |
+| Image Controller       | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components. |
+| pixlr                  | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application.                                     |
+| Image Repository       | The "Image Repository" is responsible for the storage and retrieval of images and the image data management.                                                                  |
 
 ## 5.3. Level 3 - Image Controller (Whitebox)
 
 ![Building Block View ImageController](images/05_ImageControllerComponents.png)
 <br>
-| Class                 | Description|
+| Class | Description|
 | --------------------------- | -------------------------------------------- |
 |RequestHandler | **Purpose**: Manages incoming image processing requests.<br>**Responsibilities**: Validates requests, parses parameters, and routes them to the appropriate service or queue.|
 |Task Manager|**Purpose**: handles scheduling and dispatching of tasks, making it the central point for task management. <br>**Responsibilities**: Organizes and assigns image processing tasks, manages the processing workflow, and oversees task execution based on system load and priorities.|
 |Response and Resource Coordinator| **Purpose**: takes care of assembling responses and managing resources, streamlining post-processing operations. <br>**Responsibilities**: Assembles and delivers processed image responses while managing system resources (like memory and processor usage) and handling post-processing resource cleanup.|
-|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.| 
+|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.|
 |Configuration Manager | **Purpose**: Handles configuration settings for the Image Controller. <br>**Responsibilities**: Manages settings related to processing algorithms, API integrations, and operational parameters.|
 |API Interface | **Purpose**: Serves as the interface for communication with other system components or external APIs. <br>**Responsibilities**: Translates internal processing results to API responses, and vice versa for incoming requests.|
 
@@ -552,15 +551,17 @@ There are many notations for describing scenarios, e.g.
 See [Runtime View](https://docs.arc42.org/section-6/) in the arc42
 documentation.
 
-## User with subscription uploads an image and edits it with Pixlr
+## User with uploads an image
 
-![Sequence diagram of image upload](images/image_upload.png)
+![Sequence diagram of image upload](images/Upload_seq.png)
 
-- The User API acts as a gatekeeper to ensure the user has a valid subscription
+- The User API acts as a gatekeeper to ensure the user is valid
 
-## User updates their profile
+## User edits an image with Pixlr and uploads it
 
-![Sequence diagram of profile update](images/profile_update.png)
+![Sequence diagram of profile update](images/Pixlr_seq.png)
+
+- The User API acts as a gatekeeper to ensure the user is valid and has a subscription
 
 <div style="page-break-after: always;"></div>
 
@@ -568,7 +569,6 @@ documentation.
 <br>
 
 # 7. Deployment View
-<br>
 
 ![Deployment View diagram](images/07_deplomentView.png)
 
@@ -580,7 +580,7 @@ documentation.
 |Cloud||
 |pxlr Server||
 
-
+<
 
 <hr>
 <br>
@@ -613,7 +613,7 @@ We implement comprehensive authentication mechanisms, often considering OAuth2 f
 
 #### Backend Using Node.js
 
-- **Microservices Architecture for scalability and ease of maintanance**
+- **[Microservices](#Microservices) Architecture for scalability and ease of maintanance**
 - **RESTful APIs for decoupling communication between frontend and backend services**
 
 ### 8.5 "Under-the-Hood"
@@ -653,18 +653,18 @@ Our operational strategy includes:
         <td>Large number of users/images</td>
         <td>
             <ul>
-                <li>Micro Services</li>
-                <li>Monolithic</li>
+                <li><a href="#Microservices">Microservices</a></li>
+                <li><a href="#Monolithic">Monolithic</a></li>
             </ul>
         </td>
-        <td>Micro Services, because of scalability and reliability in a scaling scenario</td>
+        <td><a href="#Microservices">Microservices</a>, because of scalability and <a href="#Reliability">reliability</a> in a scaling scenario</td>
     </tr>
     <tr>
         <td>Optimizing Image Loading Performance</td>
         <td>
             <ul>
-                <li>Synchronous Image Loading</li>
-                <li>Asynchronous Image Loading with Caching</li>
+                <li><a href="#Synchronous Image Loading">Synchronous Image Loading</a></li>
+                <li><a href="#ASynchronous Image Loading with Caching">ASynchronous Image Loading with Caching</a></li>
             </ul>
         </td>
         <td>Asynchronous, because of faster loading, smoother user experience, reduced waiting.</td>
@@ -673,11 +673,11 @@ Our operational strategy includes:
         <td>Ensuring High Availability in Case of Server Failures</td>
         <td>
             <ul>
-                <li>Single Server with Failover Mechanism</li>
-                <li>Load Balancing across Multiple Servers</li>
+                <li><a href="#Single Server with Failover Mechanism">Single Server with Failover Mechanism</a</li>
+                <li><a href="#Load Balancing">Load Balancing</a> across Multiple Servers</li>
             </ul>
         </td>
-        <td>Load Balancing, because of enhanced reliability, prevents overloading, ensures availability.</td>
+        <td><a href="#Load Balancing">Load Balancing</a>, because of enhanced <a href="#Reliability">reliability</a>, prevents overloading, ensures availability.</td>
     </tr>
 </table>
 </br>
@@ -703,7 +703,7 @@ Our operational strategy includes:
 
 <div class="formalpara-title">
 
-**Usability**
+**[Usability](#Usability)**
 
 </div>
 
@@ -717,7 +717,7 @@ An existing user is interested in premium features. When the user navigates to t
 
 <div class="formalpara-title">
 
-**Reliability**
+**[Reliability](#Reliability)**
 
 </div>
 
@@ -731,7 +731,7 @@ One of the servers hosting the app fails. The failure occurs during peak usage h
 
 <div class="formalpara-title">
 
-**Performance**
+**[Performance](#Performance)**
 
 </div>
 
@@ -766,8 +766,8 @@ The app is experiencing peak traffic. When a user performs an action requiring s
         <td>Security risks: data breaches, legal implications possible; Regular audits, encryption, access control, and policies</td>
     </tr>
     <tr>
-        <td>Performance reduction due to unoptimized image sharing</td>
-        <td>Performance reduction as the user base grows and image uploads increase; Utilize image compression techniques to decrease file sizes without compromising quality; Regular performance testing and optimization</td>
+        <td><a href="#Performance">Performance</a> reduction due to unoptimized image sharing</td>
+        <td><a href="#Performance">Performance</a> reduction as the user base grows and image uploads increase; Utilize image compression techniques to decrease file sizes without compromising quality; Regular <a href="#Performance">performance</a> testing and optimization</td>
     </tr>
 </table>
 </div>
@@ -808,38 +808,16 @@ the arc42 documentation.
 
 # 12. Glossary
 
-<div class="formalpara-title">
-
-**Contents**
-
-</div>
-
-The most important domain and technical terms that your stakeholders use
-when discussing the system.
-
-You can also see the glossary as source for translations if you work in
-multi-language teams.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-You should clearly define your terms, so that all stakeholders
-
-- have an identical understanding of these terms
-
-- do not use synonyms and homonyms
-
-A table with columns \<Term> and \<Definition>.
-
-Potentially more columns in case you need translations.
-
-See [Glossary](https://docs.arc42.org/section-12/) in the arc42
-documentation.
-
-| Term        | Definition        |
-| ----------- | ----------------- |
-| _\<Term-1>_ | _\<definition-1>_ |
-| _\<Term-2>_ | _\<definition-2>_ |
+| Term                                   | Definition                                                                                                                                                                                                                                                                                                                                                                                                 |
+| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| <a id="ASynchronous Image Loading with Caching">ASynchronous Image Loading with Caching</a> | _A technique where images are loaded independently of the main program flow, allowing the user interface to remain responsive. Caching stores previously loaded images for quicker access in future requests, reducing loading times and server load._                                                                                                                                                     |
+| <a id="Caching strategy">Caching strategy</a>                       | _A method used to store frequently accessed data temporarily in a readily accessible location, improving response time and reducing the load on the primary data source._                                                                                                                                                                                                                                  |
+| <a id="Content Delivery Network (CDN)">Content Delivery Network (CDN)</a>         | _A global network of servers strategically positioned to deliver web content like images, videos, and web pages to users more efficiently. When a user requests content, the CDN redirects the request to the nearest server, reducing the distance the data travels, thus minimizing latency and speeding up loading times. This helps in handling high traffic loads and improving website [performance](#Performance)._ |
+| <a id="Load Balancing">Load Balancing</a>                          | _A process used in network and server architectures where incoming requests or network traffic is distributed evenly across multiple servers or resources. This ensures no single server becomes overwhelmed, leading to improved response times and [reliability](#Reliability)._                                                                                                                                         |
+| <a id="Microservices">Microservices</a>                          | _An architectural approach that structures an application as a collection of small, independent services. Each service is focused on a specific function and communicates with other services through well-defined APIs. This approach enables easier scaling, maintenance, and faster deployment of individual components._                                                                               |
+| <a id="Monolithic">Monolithic</a>                             | _An architectural style where an application is built as a single, unified unit. In a monolithic architecture, all components of the application – such as the user interface, business logic, and data access layer – are tightly integrated and deployed as one entity. This approach can simplify development and deployment initially but may become complex and unwieldy as the application grows._   |
+| <a id="Performance">Performance</a>                            | _Refers to how well a software system meets its non-functional requirements related to speed, responsiveness, and efficiency. In software architecture, performance encompasses design considerations that affect how quickly and effectively a system processes data, handles load, and responds to user interactions._                                                                                   |
+| <a id="Reliability">Reliability</a>                            | _The measure of a software system's ability to perform its intended functions consistently and accurately over time, under specified conditions. It involves aspects like fault tolerance, error handling, and system availability, ensuring that the system remains operational and dependable, even in the face of failures or unexpected conditions._                                                   |
+| <a id="Single Server with Failover Mechanism">Single Server with Failover Mechanism</a>  | _A setup where a primary server handles all requests under normal conditions, and in case of its failure, a failover mechanism automatically redirects traffic to a backup server. This ensures continuous service availability, albeit with potential limitations in scalability and [performance](#Performance) compared to multi-server configurations._                                                                |
+| <a id="Synchronous Image Loading">Synchronous Image Loading</a>               | _A process where images are loaded in a sequential manner, with each image request being processed and completed before the next one begins. This approach can cause delays in user interface responsiveness, as the system waits for each image to load completely before proceeding with other tasks._                                                                                                   |
+| <a id="Usability">Usability</a>                              | _Refers to the ease with which users can effectively interact with a software system. In software architecture, usability encompasses designing interfaces and workflows that are intuitive, accessible, and provide a positive user experience._                                                                                                                                                         |
