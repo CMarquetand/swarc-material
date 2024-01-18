@@ -307,6 +307,7 @@ together with a mapping table showing the relationships between channels
 and input/output.
 
 **\<Diagram or Table>**
+
 ## 3.2. Technical Context
 
 ## Technical Context / explanation of Interfaces
@@ -425,16 +426,14 @@ documentation.
 
 # 5. Building Block View
 
-
 ## 5.1. Whitebox Overall System
-
-
 
 ![Building Block View Level 1](images/05_level1.png)
 <br>
 
 **Contained blackboxes**
 
+<<<<<<< HEAD
 | Components                 | Description|
 | --------------------------- | -------------------------------------------- |
 |Image processing | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation. |
@@ -444,11 +443,22 @@ documentation.
 |User data | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy|
 |Image Metadata | The "Image Metadata" component manages information related to images, such as tags, descriptions, and ownership details, facilitating efficient image categorization and searchability.|
 |Data handling | The "Data handling" component is the primary data handling solution, designed for robust, scalable, and secure handling of app data, including images and metadata and communicating with the cloud storage.|
+=======
+| Components           | Description                                                                                                                                                                             |
+| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Image processing     | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation.                                 |
+| User profile         | The "User Profile" component manages user account information, preferences, and settings, offering a personalized user experience.                                                      |
+| Notifications        | The "Notifications" component is responsible for generating and delivering alerts and messages to users based on their activities and preferences.                                      |
+| Images               | The "Images" component is dedicated to storing and retrieving image files, optimized for high-volume and large-size image data handling.                                                |
+| User data            | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy       |
+| Image Metadata       | The "Image Metadata" component manages information related to images, such as tags, descriptions, and ownership details, facilitating efficient image categorization and searchability. |
+| Files system storage | The "File System Storage" component is the primary data storage solution, designed for robust, scalable, and secure storage of app data, including images and metadata.                 |
+>>>>>>> abee37a8e20917935b254e76935c333ddcb2e062
 
 <br>
 
 **Interfaces**
-| Interfaces                | Description|
+| Interfaces | Description|
 | --------------------------- | -------------------------------------------- |
 |Image API| The "Image API" serves as an interface to interact with the image processing functionalities, enabling seamless integration and data exchange.|
 |Pxlr API| The "Pixlr API" is integrated for advanced image editing and processing capabilities, enriching the app's image manipulation features.|
@@ -459,32 +469,30 @@ documentation.
 <br>
 
 ## 5.2. Level 2 - Image Processing (Whitebox)
+
 ![Building Block View Level 2](images/05_level2.png)
 
 <br>
 
-**Contained blackboxes** 
+**Contained blackboxes**
 
-| Components                 | Description|
-| --------------------------- | -------------------------------------------- |
-| Image processing Queue | The "Image Processing Queue" efficiently organizes and prioritizes image processing tasks, ensuring orderly and timely handling of image manipulations.|
-| Image Controller | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components.  |
-| pixlr | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application. |
-| Image Repository| The "Image Repository" is responsible for the storage and retrieval of images and the image data management.|
-
-
-
+| Components             | Description                                                                                                                                                                   |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Image processing Queue | The "Image Processing Queue" efficiently organizes and prioritizes image processing tasks, ensuring orderly and timely handling of image manipulations.                       |
+| Image Controller       | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components. |
+| pixlr                  | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application.                                     |
+| Image Repository       | The "Image Repository" is responsible for the storage and retrieval of images and the image data management.                                                                  |
 
 ## 5.3. Level 3 - Image Controller (Whitebox)
 
 ![Building Block View ImageController](images/05_ImageControllerComponents.png)
 <br>
-| Class                 | Description|
+| Class | Description|
 | --------------------------- | -------------------------------------------- |
 |RequestHandler | **Purpose**: Manages incoming image processing requests.<br>**Responsibilities**: Validates requests, parses parameters, and routes them to the appropriate service or queue.|
 |Task Manager|**Purpose**: handles scheduling and dispatching of tasks, making it the central point for task management. <br>**Responsibilities**: Organizes and assigns image processing tasks, manages the processing workflow, and oversees task execution based on system load and priorities.|
 |Response and Resource Coordinator| **Purpose**: takes care of assembling responses and managing resources, streamlining post-processing operations. <br>**Responsibilities**: Assembles and delivers processed image responses while managing system resources (like memory and processor usage) and handling post-processing resource cleanup.|
-|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.| 
+|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.|
 |Configuration Manager | **Purpose**: Handles configuration settings for the Image Controller. <br>**Responsibilities**: Manages settings related to processing algorithms, API integrations, and operational parameters.|
 |API Interface | **Purpose**: Serves as the interface for communication with other system components or external APIs. <br>**Responsibilities**: Translates internal processing results to API responses, and vice versa for incoming requests.|
 
@@ -552,7 +560,7 @@ There are many notations for describing scenarios, e.g.
 See [Runtime View](https://docs.arc42.org/section-6/) in the arc42
 documentation.
 
-## User with subscription uploads an image
+## User with uploads an image
 
 ![Sequence diagram of image upload](images/Upload_seq.png)
 
@@ -581,6 +589,7 @@ documentation.
 |Server - backend processing||
 |Cloud||
 |pxlr Server||
+
 
 
 <hr>
