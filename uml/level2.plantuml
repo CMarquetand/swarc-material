@@ -1,0 +1,22 @@
+@startuml level2
+skinparam linetype ortho
+
+package "Image Processing" {
+    [Image Controller]
+    [pixlr]
+    [Image Repository]
+
+    [Image Controller] -- [pixlr] 
+    [Image Controller] -- [Image Repository] 
+    
+}
+interface "Image API" as I
+interface "Pixlr API" as P
+
+[Image Controller].right.[I] 
+[pixlr].left. [P]
+
+
+@enduml
+
+
