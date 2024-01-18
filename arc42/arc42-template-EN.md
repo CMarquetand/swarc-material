@@ -245,7 +245,7 @@ documentation.
 ## 3.2. Technical Context
 
 <div class="formalpara-title">
-
+  
 ![Technical Context](images/techContext.png)
 
 # 4. Solution Strategy
@@ -280,27 +280,30 @@ documentation.
 
 # 5. Building Block View
 
+
 ## 5.1. Whitebox Overall System
+
+
 
 ![Building Block View Level 1](images/05_level1.png)
 <br>
 
 **Contained blackboxes**
 
-| Components           | Description                                                                                                                                                                             |
-| -------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image processing     | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation.                                 |
-| User profile         | The "User Profile" component manages user account information, preferences, and settings, offering a personalized user experience.                                                      |
-| Notifications        | The "Notifications" component is responsible for generating and delivering alerts and messages to users based on their activities and preferences.                                      |
-| Images               | The "Images" component is dedicated to storing and retrieving image files, optimized for high-volume and large-size image data handling.                                                |
-| User data            | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy       |
-| Image Metadata       | The "Image Metadata" component manages information related to images, such as tags, descriptions, and ownership details, facilitating efficient image categorization and searchability. |
-| Files system storage | The "File System Storage" component is the primary data storage solution, designed for robust, scalable, and secure storage of app data, including images and metadata.                 |
+| Components                 | Description|
+| --------------------------- | -------------------------------------------- |
+|Image processing | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation. |
+| User profile | The "User Profile" component manages user account information, preferences, and settings, offering a personalized user experience. |
+| Notifications | The "Notifications" component is responsible for generating and delivering alerts and messages to users based on their activities and preferences. |
+| Images | The "Images" component is dedicated to storing and retrieving image files, optimized for high-volume and large-size image data handling.|
+|User data | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy|
+|Image Metadata | The "Image Metadata" component manages information related to images, such as tags, descriptions, and ownership details, facilitating efficient image categorization and searchability.|
+|Data handling | The "Data handling" component is the primary data handling solution, designed for robust, scalable, and secure handling of app data, including images and metadata and communicating with the cloud storage.|
 
 <br>
 
 **Interfaces**
-| Interfaces | Description|
+| Interfaces                | Description|
 | --------------------------- | -------------------------------------------- |
 |Image API| The "Image API" serves as an interface to interact with the image processing functionalities, enabling seamless integration and data exchange.|
 |Pxlr API| The "Pixlr API" is integrated for advanced image editing and processing capabilities, enriching the app's image manipulation features.|
@@ -311,7 +314,6 @@ documentation.
 <br>
 
 ## 5.2. Level 2 - Image Processing (Whitebox)
-
 ![Building Block View Level 2](images/05_level2.png)
 
 <br>
@@ -329,12 +331,12 @@ documentation.
 
 ![Building Block View ImageController](images/05_ImageControllerComponents.png)
 <br>
-| Class | Description|
+| Class                 | Description|
 | --------------------------- | -------------------------------------------- |
 |RequestHandler | **Purpose**: Manages incoming image processing requests.<br>**Responsibilities**: Validates requests, parses parameters, and routes them to the appropriate service or queue.|
 |Task Manager|**Purpose**: handles scheduling and dispatching of tasks, making it the central point for task management. <br>**Responsibilities**: Organizes and assigns image processing tasks, manages the processing workflow, and oversees task execution based on system load and priorities.|
 |Response and Resource Coordinator| **Purpose**: takes care of assembling responses and managing resources, streamlining post-processing operations. <br>**Responsibilities**: Assembles and delivers processed image responses while managing system resources (like memory and processor usage) and handling post-processing resource cleanup.|
-|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.|
+|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.| 
 |Configuration Manager | **Purpose**: Handles configuration settings for the Image Controller. <br>**Responsibilities**: Manages settings related to processing algorithms, API integrations, and operational parameters.|
 |API Interface | **Purpose**: Serves as the interface for communication with other system components or external APIs. <br>**Responsibilities**: Translates internal processing results to API responses, and vice versa for incoming requests.|
 
@@ -363,114 +365,19 @@ documentation.
 <br>
 
 # 7. Deployment View
+<br>
 
-<div class="formalpara-title">
+![Deployment View diagram](images/07_deplomentView.png)
 
-**Content**
+| Node                 | Description|
+| --------------------------- | -------------------------------------------- |
+|Development Environment|React Native is used for building the mobile frontend, offering a cross-platform framework for mobile app development. Node.js is likely used for backend development, providing a scalable and efficient environment for server-side programming.|
+|Mobile Device|client-side of the application that runs on users' mobile devices. It includes the frontend interface of the application where users interact. |
+|Server - backend processing|central server of the application. It handles the backend processing, including business logic, user authentication, database interactions, and integration with other services like the Pixlr server. It processes requests from the mobile frontend and communicates with the cloud storage and other services as needed.|
+|Cloud|cloud-based storage services is used for storing data that the application needs e.g. user data, images|
+|pxlr Server|external server that processes image-related requests from the main server|
 
-</div>
 
-The deployment view describes:
-
-1.  technical infrastructure used to execute your system, with
-    infrastructure elements like geographical locations, environments,
-    computers, processors, channels and net topologies as well as other
-    infrastructure elements and
-
-2.  mapping of (software) building blocks to that infrastructure
-    elements.
-
-Often systems are executed in different environments, e.g. development
-environment, test environment, production environment. In such cases you
-should document all relevant environments.
-
-Especially document a deployment view if your software is executed as
-distributed system with more than one computer, processor, server or
-container or when you design and construct your own hardware processors
-and chips.
-
-From a software perspective it is sufficient to capture only those
-elements of an infrastructure that are needed to show a deployment of
-your building blocks. Hardware architects can go beyond that and
-describe an infrastructure to any level of detail they need to capture.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-Software does not run without hardware. This underlying infrastructure
-can and will influence a system and/or some cross-cutting concepts.
-Therefore, there is a need to know the infrastructure.
-
-Maybe a highest level deployment diagram is already contained in section
-3.2. as technical context with your own infrastructure as ONE black box.
-In this section one can zoom into this black box using additional
-deployment diagrams:
-
-- UML offers deployment diagrams to express that view. Use it,
-  probably with nested diagrams, when your infrastructure is more
-  complex.
-
-- When your (hardware) stakeholders prefer other kinds of diagrams
-  rather than a deployment diagram, let them use any kind that is able
-  to show nodes and channels of the infrastructure.
-
-See [Deployment View](https://docs.arc42.org/section-7/) in the arc42
-documentation.
-
-## Infrastructure Level 1
-
-Describe (usually in a combination of diagrams, tables, and text):
-
-- distribution of a system to multiple locations, environments,
-  computers, processors, .., as well as physical connections between
-  them
-
-- important justifications or motivations for this deployment
-  structure
-
-- quality and/or performance features of this infrastructure
-
-- mapping of software artifacts to elements of this infrastructure
-
-For multiple environments or alternative deployments please copy and
-adapt this section of arc42 for all relevant environments.
-
-**_\<Overview Diagram>_**
-
-Motivation  
-_\<explanation in text form>_
-
-Quality and/or Performance Features  
-_\<explanation in text form>_
-
-Mapping of Building Blocks to Infrastructure  
-_\<description of the mapping>_
-
-## Infrastructure Level 2
-
-Here you can include the internal structure of (some) infrastructure
-elements from level 1.
-
-Please copy the structure from level 1 for each selected element.
-
-### _\<Infrastructure Element 1>_
-
-_\<diagram + explanation>_
-
-### _\<Infrastructure Element 2>_
-
-_\<diagram + explanation>_
-
-…
-
-### _\<Infrastructure Element n>_
-
-_\<diagram + explanation>_
-
-<div style="page-break-after: always;"></div>
 
 <hr>
 <br>

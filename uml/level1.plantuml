@@ -1,0 +1,50 @@
+@startuml level1
+
+component {
+    'component "User profile" 
+    [User profile]
+
+    'component "Notifications"
+    [Notifications]
+
+    'component "Image processing"
+    [Image processing]
+
+    'component "User Data"
+    [User data]
+
+    'component "Images and Image metadata"
+    [Images]
+
+    [Image Metadata]
+
+    'component "file system storage"
+    [Data handling]
+}
+
+interface "Image API" as I
+interface "User API" as U
+interface "Notification API" as N
+interface "Cloud storage API" as C
+interface "Pixlr API" as P
+
+
+[User profile] .up. U
+[Notifications] .up. N
+[Image processing] .up. I
+[Image processing] .up. P
+[Data handling] .left. C 
+
+[User data] .up. [User profile]
+[Image Metadata] .up. [Image processing]
+[Images] .up. [Image processing]
+[Notifications] .. [User data]
+[User data] .down. [Data handling]
+[Images] .down. [Data handling]
+[Image Metadata] .down. [Data handling]
+[User profile] .. [Images]
+[Images] .. [Image Metadata]
+
+
+
+@enduml
