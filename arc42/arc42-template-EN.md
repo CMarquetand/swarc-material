@@ -242,118 +242,11 @@ documentation.
 
 </div>
 
-Specification of **all** communication partners (users, IT-systems, …)
-with explanations of domain specific inputs and outputs or interfaces.
-Optionally you can add domain specific formats or communication
-protocols.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-All stakeholders should understand which data are exchanged with the
-environment of the system.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-All kinds of diagrams that show the system as a black box and specify
-the domain interfaces to communication partners.
-
-Alternatively (or additionally) you can use a table. The title of the
-table is the name of your system, the three columns contain the name of
-the communication partner, the inputs, and the outputs.
-
-**\<Diagram or Table>**
-
-**\<optionally: Explanation of external domain interfaces>**
-
 ## 3.2. Technical Context
 
 <div class="formalpara-title">
-
-**Contents**
-
-</div>
-
-Technical interfaces (channels and transmission media) linking your
-system to its environment. In addition a mapping of domain specific
-input/output to the channels, i.e. an explanation which I/O uses which
-channel.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-Many stakeholders make architectural decision based on the technical
-interfaces between the system and its context. Especially infrastructure
-or hardware designers decide these technical interfaces.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-E.g. UML deployment diagram describing channels to neighboring systems,
-together with a mapping table showing the relationships between channels
-and input/output.
-
-**\<Diagram or Table>**
-## 3.2. Technical Context
-
-## Technical Context / explanation of Interfaces
-
-<table border="1">
-    <tr>
-        <th>Interface</th>
-        <th>Description</th>
-        <th>I/O</th>
-    </tr>
-    <td><b>User API</b></td>
-        <td>Handles user authentication, profile management, and other</td>
-        <td>REST requests</td>
-    </tr>
-    <tr>
-        <td><b>Image API</b></td>
-        <td>Handles image upload, retrieval, and basic image operations via RESTful services</td>
-        <td>REST requests</td>
-    </tr>
-    <tr>
-        <td><b>Pixlr API</b></td>
-        <td>Handles Pixlr (external service) for advanced image editing</td>
-        <td>in: Images<br>out: Edited images</td>
-    </tr>
-    <tr>
-        <td><b>Cloud Storage API</b></td>
-        <td>Handles the storage and retrieval of images and user data</td>
-        <td>REST requests</td>
-    </tr>
-    <tr>
-        <td><b>Notification API</b></td>
-        <td>Handles sending notifications to users</td>
-        <td>REST requests?</td>
-    </tr>
-    <tr>
-        <td><b>Mobile App</b></td>
-        <td>The frontend application running on user devices</td>
-        <td>REST requests</td>
-    </tr>
-</table>
-
-**\<Mapping Input/Output to Channels>**
-
-<div style="page-break-after: always;"></div>
-
-<hr>
-<br>
+  
+![Technical Context](images/techContext.png)
 
 # 4. Solution Strategy
 
@@ -379,44 +272,6 @@ and input/output.
 </table>
 
 </div>
-
-A short summary and explanation of the fundamental decisions and
-solution strategies, that shape system architecture. It includes
-
-- technology decisions
-
-- decisions about the top-level decomposition of the system, e.g.
-  usage of an architectural pattern or design pattern
-
-- decisions on how to achieve key quality goals
-
-- relevant organizational decisions, e.g. selecting a development
-  process or delegating certain tasks to third parties.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-These decisions form the cornerstones for your architecture. They are
-the foundation for many other detailed decisions or implementation
-rules.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-Keep the explanations of such key decisions short.
-
-Motivate what was decided and why it was decided that way, based upon
-problem statement, quality goals and key constraints. Refer to details
-in the following sections.
-
-See [Solution Strategy](https://docs.arc42.org/section-4/) in the arc42
-documentation.
 
 <div style="page-break-after: always;"></div>
 
@@ -492,64 +347,7 @@ documentation.
 
 <div class="formalpara-title">
 
-**Contents**
-
-</div>
-
-The runtime view describes concrete behavior and interactions of the
-system’s building blocks in form of scenarios from the following areas:
-
-- important use cases or features: how do building blocks execute
-  them?
-
-- interactions at critical external interfaces: how do building blocks
-  cooperate with users and neighboring systems?
-
-- operation and administration: launch, start-up, stop
-
-- error and exception scenarios
-
-Remark: The main criterion for the choice of possible scenarios
-(sequences, workflows) is their **architectural relevance**. It is
-**not** important to describe a large number of scenarios. You should
-rather document a representative selection.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-You should understand how (instances of) building blocks of your system
-perform their job and communicate at runtime. You will mainly capture
-scenarios in your documentation to communicate your architecture to
-stakeholders that are less willing or able to read and understand the
-static models (building block view, deployment view).
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-There are many notations for describing scenarios, e.g.
-
-- numbered list of steps (in natural language)
-
-- activity diagrams or flow charts
-
-- sequence diagrams
-
-- BPMN or EPCs (event process chains)
-
-- state machines
-
-- …
-
-See [Runtime View](https://docs.arc42.org/section-6/) in the arc42
-documentation.
-
-## User with uploads an image
+## User uploads an image
 
 ![Sequence diagram of image upload](images/Upload_seq.png)
 
@@ -588,50 +386,56 @@ documentation.
 
 ### 8.1 Domain Concepts
 
-Our application adopts a domain-driven design to allow developers and business experts to collaborate more efficiently.
+Our application follows a domain-driven design to allow developers and business experts to collaborate more efficiently.
+- **Domains:**
+  - **User Management**: 
+    - User registration, authentication, profile management and subscription services.
+  - **Image Processing**: 
+    - Image upload, editing, retrieval and storage.
+  - **Content Moderation and Community**: 
+    - User comments, social sharing, collaborative features and ensure appropriate content.
+
 
 ### 8.2 User Experience (UX) Concepts
 
-- **Responsive Design**
-- **Intuitive Navigation**
-- **Error Handling**
+- **Responsive Design:** Making sure the app's interface adapts to various device sizes and orientations.
+- **Intuitive Navigation:** Easy-to-use and understand navigation elements, to facilitate a seamless user journey.
 
 ### 8.3 Safety and Security Concepts
 
-We implement comprehensive authentication mechanisms, often considering OAuth2 for secure access management. Data protection is enhanced through:
-
-- **Encryption for sensitive data**
-- **Compliance to the Digital Service Act** TODO: look up other relevant laws?
+- **Encryption for sensitive data.**
+- **Compliance to the Digital Service Act and General Data Protection Regulation.**
 
 ### 8.4 Architecture and Design Patterns
 
 #### Frontend Using React Native
 
-- **Pattern:** TODO: MVC? Command pattern?
+- **Cross platform development:** Android and iOS devices.
 - **Component-Based Structure:** Reusable UI components and efficient state management.
 
 #### Backend Using Node.js
 
-- **[Microservices](#Microservices) Architecture for scalability and ease of maintanance**
-- **RESTful APIs for decoupling communication between frontend and backend services**
+- **[Microservices](#Microservices) Architecture for scalability and ease of maintanance.**
+- **RESTful APIs for decoupling communication between frontend and backend services.**
 
 ### 8.5 "Under-the-Hood"
 
-TODO: choose database. We use AWS for hosting, taking advantage of their scalability and reliability.
+- **Database and persistency:** AWS for hosting, taking advantage of their scalability and reliability.
 
 ### 8.6 Development Concepts
 
-We adhere to **Agile methodologies**, encouraging iterative development and incorporating regular stakeholder feedback. Our development practices include:
+We adopt **Agile methodologies**, encouraging iterative development and incorporating regular stakeholder feedback. <br>
+Our development practices include:
 
-- **Git for Version Control and Peer-Reviews**
-- **CI/CD Pipelines with automated testing and deployment**
+- **Git for Version Control and mandatory Peer-Reviews.**
+- **CI/CD Pipelines with automated testing and deployment.**
 
 ### 8.7 Operational Concepts
 
 Our operational strategy includes:
 
-- **Docker for Containerization**
-- **Robust Logging for error tracking and diagnosis**
+- **Docker for Containerization:** Ensure environment consistency.
+- **Robust Logging for error tracking and diagnosis**: Winston framework and dashboard for logging and monitoring.
 
 <div style="page-break-after: always;"></div>
 

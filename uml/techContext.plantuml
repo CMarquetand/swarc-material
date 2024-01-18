@@ -1,0 +1,32 @@
+@startuml
+top to bottom direction
+
+package "Image Sharing App" {
+    [User API (Gatekeeper)] as UserAPI
+    [Image API] as ImageAPI
+    [Pixlr API] as PixlrAPI
+    [Cloud Storage API] as CloudStorageAPI
+    [Notification API] as NotificationAPI
+    [Mobile App] as MobileApp
+}
+
+package "External Systems" {
+    [User Devices] as UserDevices
+    [Pixlr Service] as PixlrService
+    [Cloud Storage Service] as CloudStorageService
+    [Firebase Cloud Messaging] as NotificationService
+}
+
+UserDevices -left- MobileApp : User Interaction
+MobileApp -- UserAPI : Authentication and Authorization
+UserAPI -- ImageAPI : Image Related Requests
+UserAPI -- PixlrAPI : Image Editing Requests
+UserAPI -- NotificationAPI : Notification Management
+
+ImageAPI -- CloudStorageAPI : Image Storage Management
+PixlrAPI -- PixlrService : External Editing Service
+CloudStorageAPI --- CloudStorageService : Cloud-based Image/Data Storage
+NotificationAPI -- NotificationService : Push Notifications
+
+@enduml
+
