@@ -1,9 +1,6 @@
 @startuml deplomentView1
 
-cloud cloudStorage [
-    Cloud  
-    Azure storage
-]
+
 agent pixlrServer
 node MobileDevice [
 Mobile device
@@ -11,10 +8,12 @@ Mobile device
 Frontend
 ]
 
-node Server [
-Server
-----
-Backend processing
+cloud Server [
+Cloud provider
+   
+Cloud provided Server service
+&
+Cloud Storage solution
 ]
 
 node DevelopmentEnvironment [
@@ -25,7 +24,6 @@ react native, node.js
 
 MobileDevice -up- Server
 DevelopmentEnvironment -- Server
-Server -down- cloudStorage
 pixlrServer - Server
 
 @enduml

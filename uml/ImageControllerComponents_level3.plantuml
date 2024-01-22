@@ -8,19 +8,9 @@ package "Image Controller" {
         + validateRequests()
         + parseParameters()
         + routeRequests()
-    }
-
-    class TaskManager {
-        + organizeTasks()
-        + assignTasks()
         + manageProcessingWorkflow()
     }
 
-    class ResponseAndResourceCoordinator {
-        + assembleResponses()
-        + manageSystemResources()
-        + handleResourceCleanup()
-    }
 
     class MonitoringAndLogging {
         + logActivity()
@@ -41,8 +31,6 @@ package "Image Controller" {
     }
 
     ' Connections
-    RequestHandler --  TaskManager : validates -> schedules
-    TaskManager -- ResponseAndResourceCoordinator : assembles & manages resources
     RequestHandler -- MonitoringAndLogging : monitors requests
     RequestHandler -- ConfigurationManager : configures settings
     RequestHandler -- APIInterface : interfaces with API

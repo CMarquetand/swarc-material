@@ -322,7 +322,6 @@ documentation.
 
 | Components             | Description                                                                                                                                                                   |
 | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image processing Queue | The "Image Processing Queue" efficiently organizes and prioritizes image processing tasks, ensuring orderly and timely handling of image manipulations.                       |
 | Image Controller       | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components. |
 | pixlr                  | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application.                                     |
 | Image Repository       | The "Image Repository" is responsible for the storage and retrieval of images and the image data management.                                                                  |
@@ -330,6 +329,8 @@ documentation.
 ## 5.3. Level 3 - Image Controller (Whitebox)
 
 ![Building Block View ImageController](images/05_ImageControllerComponents.png)
+
+![Building Block View ImageController Version2](images/ImageControllerComponents_level3V2.png)
 <br>
 | Class                 | Description|
 | --------------------------- | -------------------------------------------- |
@@ -373,8 +374,8 @@ documentation.
 | --------------------------- | -------------------------------------------- |
 |Development Environment|React Native is used for building the mobile frontend, offering a cross-platform framework for mobile app development. Node.js is likely used for backend development, providing a scalable and efficient environment for server-side programming.|
 |Mobile Device|client-side of the application that runs on users' mobile devices. It includes the frontend interface of the application where users interact. |
-|Server - backend processing|central server of the application. It handles the backend processing, including business logic, user authentication, database interactions, and integration with other services like the Pixlr server. It processes requests from the mobile frontend and communicates with the cloud storage and other services as needed.|
-|Cloud|cloud-based storage services is used for storing data that the application needs e.g. user data, images|
+|Cloud-Provided Server Service| This service encompasses the computational resources provided by the cloud platform, including Microservices and containerized environments. It handles the backend processing, including business logic, user authentication, database interactions, and integration with other services like the Pixlr server. It processes requests from the mobile frontend and communicates with the cloud storage and other services as needed.|
+|Cloud Storage Solution|cloud-based storage service is used for storing data that the application needs e.g. user data, images (file storage and blob storage)|
 |pxlr Server|external server that processes image-related requests from the main server|
 
 
