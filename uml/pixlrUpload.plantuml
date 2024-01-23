@@ -2,21 +2,19 @@
     title Edit image with Pixlr
 
     actor User
-    participant "User API (gatekeeper)" as U
     participant "Image API" as I
     participant "Pixlr API" as P
     participant "Image Processing" as IP
     database "User's Device" as Device
     database "Cloud Storage" as FS
 
-    User -> U: Select image for editing
-    U -> I: Forward edit request
+    User -> I: Select image for editing
     I -> P: Open Pixlr with image
     P -> User: Provide editing tools
     User -> P: Edit and save image
     P -> Device: Save edited image locally
-    User -> U: Select edited image for upload
-    U -> IP: Validate upload request
-    IP -> FS: Store edited image
+    User -> I: Select edited image for upload
+    I -> IP: Initiate processing
+    IP -> FS: Store processed image
     FS -> User: Confirm storage
 @enduml

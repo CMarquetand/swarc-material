@@ -148,43 +148,6 @@ arc42 documentation.
 
 <div class="formalpara-title">
 
-**Contents**
-
-</div>
-
-System scope and context - as the name suggests - delimits your system
-(i.e. your scope) from all its communication partners (neighboring
-systems and users, i.e. the context of your system). It thereby
-specifies the external interfaces.
-
-If necessary, differentiate the business context (domain specific inputs
-and outputs) from the technical context (channels, protocols, hardware).
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-The domain interfaces and technical interfaces to communication partners
-are among your system’s most critical aspects. Make sure that you
-completely understand them.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-Various options:
-
-- Context diagrams
-
-- Lists of communication partners and their interfaces.
-
-See [Context and Scope](https://docs.arc42.org/section-3/) in the arc42
-documentation.
-
 ## 3.1. Business Context
 
 <div class="formalpara-title">
@@ -352,13 +315,9 @@ documentation.
 
 ![Sequence diagram of image upload](images/Upload_seq.png)
 
-- The User API acts as a gatekeeper to ensure the user is valid
-
 ## User edits an image with Pixlr and uploads it
 
 ![Sequence diagram of profile update](images/Pixlr_seq.png)
-
-- The User API acts as a gatekeeper to ensure the user is valid and has a subscription
 
 <div style="page-break-after: always;"></div>
 
@@ -421,7 +380,7 @@ Our application follows a domain-driven design to allow developers and business 
 
 ### 8.5 "Under-the-Hood"
 
-- **Database and persistency:** AWS for hosting, taking advantage of their scalability and reliability.
+- **Database and persistency:** Cloud provider for hosting, taking advantage of their scalability and reliability.
 
 ### 8.6 Development Concepts
 

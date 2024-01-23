@@ -2,13 +2,11 @@
     title Upload image
     
     actor User
-    participant "User API (gatekeeper)" as U
     participant "Image API" as I
     participant "Image Processing" as IP
     database "Cloud Storage" as FS
 
-    User -> U: Upload image
-    U -> I: Forward image
+    User ->  I: Upload Image
     I -> IP: Initiate processing
     IP -> FS: Store processed image
     FS -> User: Confirm storage

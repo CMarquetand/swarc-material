@@ -2,12 +2,12 @@
 top to bottom direction
 
 package "Image Sharing App" {
-    [User API (Gatekeeper)] as UserAPI
+    [Mobile App] as MobileApp
     [Image API] as ImageAPI
     [Pixlr API] as PixlrAPI
     [Cloud Storage API] as CloudStorageAPI
     [Notification API] as NotificationAPI
-    [Mobile App] as MobileApp
+    [User API] as UserAPI
 }
 
 package "External Systems" {
@@ -17,16 +17,15 @@ package "External Systems" {
     [Firebase Cloud Messaging] as NotificationService
 }
 
-UserDevices -left- MobileApp : User Interaction
-MobileApp -- UserAPI : Authentication and Authorization
-UserAPI -- ImageAPI : Image Related Requests
-UserAPI -- PixlrAPI : Image Editing Requests
-UserAPI -- NotificationAPI : Notification Management
+UserDevices -- UserAPI : User Interaction/Authentication
+UserAPI -- MobileApp : User Interaction
+MobileApp -- ImageAPI : Images Upload/Download
+MobileApp -- NotificationAPI : Manage Notifications
 
-ImageAPI -- CloudStorageAPI : Image Storage Management
+ImageAPI -- PixlrAPI : Edit Image
+ImageAPI -- CloudStorageAPI : Save/Retrieve Images
 PixlrAPI -- PixlrService : External Editing Service
-CloudStorageAPI --- CloudStorageService : Cloud-based Image/Data Storage
+CloudStorageAPI -- CloudStorageService : Store/Retrieve Image/Data
 NotificationAPI -- NotificationService : Push Notifications
 
 @enduml
-
