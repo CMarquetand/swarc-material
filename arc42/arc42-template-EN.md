@@ -60,7 +60,6 @@ The app must be able to handle a large concurrent user base.
 
 <div class="formalpara-title">
 
-Table 1. Quality Goals
 
 | Priority | Quality     | Motivation                                                                                                                    |
 | -------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
@@ -76,7 +75,6 @@ Table 1. Quality Goals
 
 The following lists contains the most important personas for this application
 
-Table 2. Stakeholders
 
 | Role/Name                                                  | Expectations                                                                                                                                                                                                  |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -106,38 +104,7 @@ Table 2. Stakeholders
 | Budgetary Limitations       | available budget constraints the scale of infrastructure, and the acquisition of third-party services                                                              |
 | Platform Compatibility      | The application should work on IOS                                                                                                                                 |
 
-**Contents**
 
-</div>
-
-Any requirement that constraints software architects in their freedom of
-design and implementation decisions or decision about the development
-process. These constraints sometimes go beyond individual systems and
-are valid for whole organizations and companies.
-
-<div class="formalpara-title">
-
-**Motivation**
-
-</div>
-
-Architects should know exactly where they are free in their design
-decisions and where they must adhere to constraints. Constraints must
-always be dealt with; they may be negotiable, though.
-
-<div class="formalpara-title">
-
-**Form**
-
-</div>
-
-Simple tables of constraints with explanations. If needed you can
-subdivide them into technical constraints, organizational and political
-constraints and conventions (e.g. programming or versioning guidelines,
-documentation or naming conventions)
-
-See [Architecture Constraints](https://docs.arc42.org/section-2/) in the
-arc42 documentation.
 
 <div style="page-break-after: always;"></div>
 
@@ -291,15 +258,12 @@ arc42 documentation.
 
 ## 5.3. Level 3 - Image Controller (Whitebox)
 
-![Building Block View ImageController](images/05_ImageControllerComponents.png)
 
 ![Building Block View ImageController Version2](images/ImageControllerComponents_level3V2.png)
 <br>
 | Class                 | Description|
 | --------------------------- | -------------------------------------------- |
-|RequestHandler | **Purpose**: Manages incoming image processing requests.<br>**Responsibilities**: Validates requests, parses parameters, and routes them to the appropriate service or queue.|
-|Task Manager|**Purpose**: handles scheduling and dispatching of tasks, making it the central point for task management. <br>**Responsibilities**: Organizes and assigns image processing tasks, manages the processing workflow, and oversees task execution based on system load and priorities.|
-|Response and Resource Coordinator| **Purpose**: takes care of assembling responses and managing resources, streamlining post-processing operations. <br>**Responsibilities**: Assembles and delivers processed image responses while managing system resources (like memory and processor usage) and handling post-processing resource cleanup.|
+|RequestHandler and TaskManager| **Purpose**: Manages incoming image processing requests. Handles scheduling and dispatching of tasks, making it the central point for task management.<br>**Responsibilities**: Validates requests, parses parameters, and routes them to the appropriate service or queue.Organizes and assigns image processing tasks, manages the processing workflow, and oversees task execution based on system load and priorities.|
 |Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.| 
 |Configuration Manager | **Purpose**: Handles configuration settings for the Image Controller. <br>**Responsibilities**: Manages settings related to processing algorithms, API integrations, and operational parameters.|
 |API Interface | **Purpose**: Serves as the interface for communication with other system components or external APIs. <br>**Responsibilities**: Translates internal processing results to API responses, and vice versa for incoming requests.|
@@ -334,6 +298,7 @@ arc42 documentation.
 |Development Environment|React Native is used for building the mobile frontend, offering a cross-platform framework for mobile app development. Node.js is likely used for backend development, providing a scalable and efficient environment for server-side programming.|
 |Mobile Device|client-side of the application that runs on users' mobile devices. It includes the frontend interface of the application where users interact. |
 |Cloud-Provided Server Service| This service encompasses the computational resources provided by the cloud platform, including Microservices and containerized environments. It handles the backend processing, including business logic, user authentication, database interactions, and integration with other services like the Pixlr server. It processes requests from the mobile frontend and communicates with the cloud storage and other services as needed.|
+|Microservices| These are independently deployable services modeled around specific business domains e.g. In the context of our App, services like User Authentication and the Notification Service.|
 |Cloud Storage Solution|cloud-based storage service is used for storing data that the application needs e.g. user data, images (file storage and blob storage)|
 |pxlr Server|external server that processes image-related requests from the main server|
 

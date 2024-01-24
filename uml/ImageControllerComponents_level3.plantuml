@@ -4,7 +4,7 @@ skinparam linetype ortho
 
 package "Image Controller" {
 
-    class RequestHandler {
+    class RequestHandlerAndTaskManager {
         + validateRequests()
         + parseParameters()
         + routeRequests()
@@ -31,9 +31,9 @@ package "Image Controller" {
     }
 
     ' Connections
-    RequestHandler -- MonitoringAndLogging : monitors requests
-    RequestHandler -- ConfigurationManager : configures settings
-    RequestHandler -- APIInterface : interfaces with API
+    RequestHandlerAndTaskManager -- MonitoringAndLogging 
+    RequestHandlerAndTaskManager -- ConfigurationManager 
+    RequestHandlerAndTaskManager -- APIInterface 
 }
 
 @enduml
