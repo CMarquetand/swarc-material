@@ -60,12 +60,11 @@ The app must be able to handle a large concurrent user base.
 
 <div class="formalpara-title">
 
-
-| Priority | Quality     | Motivation                                                                                                                    |
-| -------- | ----------- | ----------------------------------------------------------------------------------------------------------------------------- |
-| 1        | [Usability](#Usability)   | The app must be user-friendly and easy to navigate The subscription model must be clearly communicated and easy to understand |
+| Priority | Quality                     | Motivation                                                                                                                    |
+| -------- | --------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| 1        | [Usability](#Usability)     | The app must be user-friendly and easy to navigate The subscription model must be clearly communicated and easy to understand |
 | 2        | [Reliability](#Reliability) | The app must be stable and function without significant bugs or errors                                                        |
-| 3        | [Performance](#Performance) | The app must be optimized for [performance](#Performance) and load times                                                                      |
+| 3        | [Performance](#Performance) | The app must be optimized for [performance](#Performance) and load times                                                      |
 
 </div>
 
@@ -75,14 +74,13 @@ The app must be able to handle a large concurrent user base.
 
 The following lists contains the most important personas for this application
 
-
 | Role/Name                                                  | Expectations                                                                                                                                                                                                  |
 | ---------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | Marketing Manager, Sarah Chen, Bold Branding Agency        | Expecting that the features of the application match the needs of the market, that the app is attractive to the target audience so that commercialisation and marketing campaigns are successful.             |
 | Project Manager, Michael Nguyen, Digital Dreams Inc.       | Expecting that the development of the app meets the timeframe and scope to manage deadlines, meetings and costs; Management of optimal use of resources; Focus on communication and collaboration of the team |
 | Lead Developer, Ava Patel, Pixel Perfect Solutions         | High quality of application development, clear idea of the architecture, clear documentation; Prioritizing quality goals in application development;                                                          |
-| UX/UI Designer, Emily Wong, Creative Co.                   | intuitive and attractive user interface with a focus on [usability](#Usability)                                                                                                                                             |
-| User Representative, Samir Singh, Photography Enthusiast   | easy and intuitive [usability](#Usability), users' wishes are fulfilled, high [reliability](#Reliability) (no crashes or errors)                                                                                                            |
+| UX/UI Designer, Emily Wong, Creative Co.                   | intuitive and attractive user interface with a focus on [usability](#Usability)                                                                                                                               |
+| User Representative, Samir Singh, Photography Enthusiast   | easy and intuitive [usability](#Usability), users' wishes are fulfilled, high [reliability](#Reliability) (no crashes or errors)                                                                              |
 | Photography Expert, Lucas Rodriguez, Snap & Shoot Magazine | Testing the application and ensuring that the specific features of the application meet the needs of professional photographers.                                                                              |
 
 </div>
@@ -103,8 +101,6 @@ The following lists contains the most important personas for this application
 | Third-party-integration     | The integration of the third-party service (Pixlr) puts some constraints on the features of the application, ensure efficient API management                       |
 | Budgetary Limitations       | available budget constraints the scale of infrastructure, and the acquisition of third-party services                                                              |
 | Platform Compatibility      | The application should work on IOS                                                                                                                                 |
-
-
 
 <div style="page-break-after: always;"></div>
 
@@ -193,7 +189,7 @@ The following lists contains the most important personas for this application
     </tr>
     <tr>
         <td><a href="#Performance">Performance</a></td>
-        <td><a href="#Caching strategy">Caching Strategies</a> and <a href="#Content Delivery Network (CDN)">Content Delivery Networks (CDN)</a></td>
+        <td>Caching Strategies and <a href="#Content Delivery Network (CDN)">Content Delivery Networks (CDN)</a></td>
     </tr>
     <tr>
         <td><a href="#Reliability">Reliability</a></td>
@@ -210,30 +206,27 @@ The following lists contains the most important personas for this application
 
 # 5. Building Block View
 
-
 ## 5.1. Whitebox Overall System
-
-
 
 ![Building Block View Level 1](images/05_level1.png)
 <br>
 
 **Contained blackboxes**
 
-| Components                 | Description|
-| --------------------------- | -------------------------------------------- |
-|Image processing | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation. |
-| User profile | The "User Profile" component manages user account information, preferences, and settings, offering a personalized user experience. |
-| Notifications | The "Notifications" component is responsible for generating and delivering alerts and messages to users based on their activities and preferences. |
-| Images | The "Images" component is dedicated to storing and retrieving image files, optimized for high-volume and large-size image data handling.|
-|User data | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy|
-|Image Metadata | The "Image Metadata" component manages information related to images, such as tags, descriptions, and ownership details, facilitating efficient image categorization and searchability.|
-|Data handling | The "Data handling" component is the primary data handling solution, designed for robust, scalable, and secure handling of app data, including images and metadata and communicating with the cloud storage.|
+| Components       | Description                                                                                                                                                                                                  |
+| ---------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Image processing | The "Image Processing" component handles the retrieval, transmission, and processing of images, ensuring efficient and high-quality image manipulation.                                                      |
+| User profile     | The "User Profile" component manages user account information, preferences, and settings, offering a personalized user experience.                                                                           |
+| Notifications    | The "Notifications" component is responsible for generating and delivering alerts and messages to users based on their activities and preferences.                                                           |
+| Images           | The "Images" component is dedicated to storing and retrieving image files, optimized for high-volume and large-size image data handling.                                                                     |
+| User data        | The "User Data" component focuses on storing and managing user-specific data, including preferences, usage history, and personal information, ensuring data integrity and privacy                            |
+| Image Metadata   | The "Image Metadata" component manages information related to images, such as tags, descriptions, and ownership details, facilitating efficient image categorization and searchability.                      |
+| Data handling    | The "Data handling" component is the primary data handling solution, designed for robust, scalable, and secure handling of app data, including images and metadata and communicating with the cloud storage. |
 
 <br>
 
 **Interfaces**
-| Interfaces                | Description|
+| Interfaces | Description|
 | --------------------------- | -------------------------------------------- |
 |Image API| The "Image API" serves as an interface to interact with the image processing functionalities, enabling seamless integration and data exchange.|
 |Pxlr API| The "Pixlr API" is integrated for advanced image editing and processing capabilities, enriching the app's image manipulation features.|
@@ -244,27 +237,27 @@ The following lists contains the most important personas for this application
 <br>
 
 ## 5.2. Level 2 - Image Processing (Whitebox)
+
 ![Building Block View Level 2](images/05_level2.png)
 
 <br>
 
 **Contained blackboxes**
 
-| Components             | Description                                                                                                                                                                   |
-| ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Image Controller       | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components. |
-| pixlr                  | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application.                                     |
-| Image Repository       | The "Image Repository" is responsible for the storage and retrieval of images and the image data management.                                                                  |
+| Components       | Description                                                                                                                                                                   |
+| ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Image Controller | The "Image Controller" acts as the central hub for managing and directing all image-related operations, including processing requests and coordinating with other components. |
+| pixlr            | The "Pixlr" component interfaces with the Pixlr API to provide advanced image editing and processing capabilities within the application.                                     |
+| Image Repository | The "Image Repository" is responsible for the storage and retrieval of images and the image data management.                                                                  |
 
 ## 5.3. Level 3 - Image Controller (Whitebox)
 
-
 ![Building Block View ImageController Version2](images/ImageControllerComponents_level3V2.png)
 <br>
-| Class                 | Description|
+| Class | Description|
 | --------------------------- | -------------------------------------------- |
 |RequestHandler and TaskManager| **Purpose**: Manages incoming image processing requests. Handles scheduling and dispatching of tasks, making it the central point for task management.<br>**Responsibilities**: Validates requests, parses parameters, and routes them to the appropriate service or queue.Organizes and assigns image processing tasks, manages the processing workflow, and oversees task execution based on system load and priorities.|
-|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.| 
+|Monitoring and Logging| **Purpose**: Monitors the performance and health of the Image Controller.<br>**Responsibilities**: Logs system activity, tracks performance metrics, and alerts administrators to potential issues.|
 |Configuration Manager | **Purpose**: Handles configuration settings for the Image Controller. <br>**Responsibilities**: Manages settings related to processing algorithms, API integrations, and operational parameters.|
 |API Interface | **Purpose**: Serves as the interface for communication with other system components or external APIs. <br>**Responsibilities**: Translates internal processing results to API responses, and vice versa for incoming requests.|
 
@@ -289,20 +282,19 @@ The following lists contains the most important personas for this application
 <br>
 
 # 7. Deployment View
+
 <br>
 
 ![Deployment View diagram](images/07_deplomentView.png)
 
-| Node                 | Description|
-| --------------------------- | -------------------------------------------- |
-|Development Environment|React Native is used for building the mobile frontend, offering a cross-platform framework for mobile app development. Node.js is likely used for backend development, providing a scalable and efficient environment for server-side programming.|
-|Mobile Device|client-side of the application that runs on users' mobile devices. It includes the frontend interface of the application where users interact. |
-|Cloud-Provided Server Service| This service encompasses the computational resources provided by the cloud platform, including Microservices and containerized environments. It handles the backend processing, including business logic, user authentication, database interactions, and integration with other services like the Pixlr server. It processes requests from the mobile frontend and communicates with the cloud storage and other services as needed.|
-|Microservices| These are independently deployable services modeled around specific business domains e.g. In the context of our App, services like User Authentication and the Notification Service.|
-|Cloud Storage Solution|cloud-based storage service is used for storing data that the application needs e.g. user data, images (file storage and blob storage)|
-|pxlr Server|external server that processes image-related requests from the main server|
-
-
+| Node                                       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Development Environment                    | <a href="#React Native">React Native</a> is used for building the mobile frontend, offering a cross-platform framework for mobile app development. <a href="#node.js">Node.js</a> is likely used for backend development, providing a scalable and efficient environment for server-side programming.                                                                                                                                                              |
+| Mobile Device                              | client-side of the application that runs on users' mobile devices. It includes the frontend interface of the application where users interact.                                                                                                                                                                                                                                                                                                                     |
+| Cloud-Provided Server Service              | This service encompasses the computational resources provided by the cloud platform, including <a href="#Microservices">Microservices</a> and containerized environments. It handles the backend processing, including business logic, user authentication, database interactions, and integration with other services like the Pixlr server. It processes requests from the mobile frontend and communicates with the cloud storage and other services as needed. |
+| <a href="#Microservices">Microservices</a> | These are independently deployable services modeled around specific business domains e.g. In the context of our App, services like User Authentication and the Notification Service.                                                                                                                                                                                                                                                                               |
+| Cloud Storage Solution                     | cloud-based storage service is used for storing data that the application needs e.g. user data, images (file storage and blob storage)                                                                                                                                                                                                                                                                                                                             |
+| pxlr Server                                | external server that processes image-related requests from the main server                                                                                                                                                                                                                                                                                                                                                                                         |
 
 <hr>
 <br>
@@ -312,14 +304,14 @@ The following lists contains the most important personas for this application
 ### 8.1 Domain Concepts
 
 Our application follows a domain-driven design to allow developers and business experts to collaborate more efficiently.
-- **Domains:**
-  - **User Management**: 
-    - User registration, authentication, profile management and subscription services.
-  - **Image Processing**: 
-    - Image upload, editing, retrieval and storage.
-  - **Content Moderation and Community**: 
-    - User comments, social sharing, collaborative features and ensure appropriate content.
 
+- **Domains:**
+  - **User Management**:
+    - User registration, authentication, profile management and subscription services.
+  - **Image Processing**:
+    - Image upload, editing, retrieval and storage.
+  - **Content Moderation and Community**:
+    - User comments, social sharing, collaborative features and ensure appropriate content.
 
 ### 8.2 User Experience (UX) Concepts
 
@@ -333,12 +325,12 @@ Our application follows a domain-driven design to allow developers and business 
 
 ### 8.4 Architecture and Design Patterns
 
-#### Frontend Using React Native
+#### Frontend Using <a href="#React Native">React Native</a>
 
 - **Cross platform development:** Android and iOS devices.
 - **Component-Based Structure:** Reusable UI components and efficient state management.
 
-#### Backend Using Node.js
+#### Backend Using [Node.js](#node.js)
 
 - **[Microservices](#Microservices) Architecture for scalability and ease of maintanance.**
 - **RESTful APIs for decoupling communication between frontend and backend services.**
@@ -392,7 +384,7 @@ Our operational strategy includes:
         <td>
             <ul>
                 <li><a href="#Synchronous Image Loading">Synchronous Image Loading</a></li>
-                <li><a href="#ASynchronous Image Loading with Caching">ASynchronous Image Loading with Caching</a></li>
+                <li><a href="#Asynchronous Image Loading with Image Service Caching">Asynchronous Image Loading with Image Service Caching</a></li>
             </ul>
         </td>
         <td>Asynchronous, because of faster loading, smoother user experience, reduced waiting.</td>
@@ -441,7 +433,7 @@ The user has instaled the app and opened it for the first time. When the user na
 
 Scenario 2: A user explores subscription options.
 
-An existing user is interested in premium features. When the user navigates to the subscription information section, the subscription options should be clearly presented, with differences between tiers easily understandable.
+An existing user is interested in premium features. When the user navigates to the subscription information section, the subscription options should be clearly presented.
 
 <div class="formalpara-title">
 
@@ -536,16 +528,18 @@ the arc42 documentation.
 
 # 12. Glossary
 
-| Term                                   | Definition                                                                                                                                                                                                                                                                                                                                                                                                 |
-| -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| <a id="ASynchronous Image Loading with Caching">ASynchronous Image Loading with Caching</a> | _A technique where images are loaded independently of the main program flow, allowing the user interface to remain responsive. Caching stores previously loaded images for quicker access in future requests, reducing loading times and server load._                                                                                                                                                     |
-| <a id="Caching strategy">Caching strategy</a>                       | _A method used to store frequently accessed data temporarily in a readily accessible location, improving response time and reducing the load on the primary data source._                                                                                                                                                                                                                                  |
-| <a id="Content Delivery Network (CDN)">Content Delivery Network (CDN)</a>         | _A global network of servers strategically positioned to deliver web content like images, videos, and web pages to users more efficiently. When a user requests content, the CDN redirects the request to the nearest server, reducing the distance the data travels, thus minimizing latency and speeding up loading times. This helps in handling high traffic loads and improving website [performance](#Performance)._ |
-| <a id="Load Balancing">Load Balancing</a>                          | _A process used in network and server architectures where incoming requests or network traffic is distributed evenly across multiple servers or resources. This ensures no single server becomes overwhelmed, leading to improved response times and [reliability](#Reliability)._                                                                                                                                         |
-| <a id="Microservices">Microservices</a>                          | _An architectural approach that structures an application as a collection of small, independent services. Each service is focused on a specific function and communicates with other services through well-defined APIs. This approach enables easier scaling, maintenance, and faster deployment of individual components._                                                                               |
-| <a id="Monolithic">Monolithic</a>                             | _An architectural style where an application is built as a single, unified unit. In a monolithic architecture, all components of the application – such as the user interface, business logic, and data access layer – are tightly integrated and deployed as one entity. This approach can simplify development and deployment initially but may become complex and unwieldy as the application grows._   |
-| <a id="Performance">Performance</a>                            | _Refers to how well a software system meets its non-functional requirements related to speed, responsiveness, and efficiency. In software architecture, performance encompasses design considerations that affect how quickly and effectively a system processes data, handles load, and responds to user interactions._                                                                                   |
-| <a id="Reliability">Reliability</a>                            | _The measure of a software system's ability to perform its intended functions consistently and accurately over time, under specified conditions. It involves aspects like fault tolerance, error handling, and system availability, ensuring that the system remains operational and dependable, even in the face of failures or unexpected conditions._                                                   |
-| <a id="Single Server with Failover Mechanism">Single Server with Failover Mechanism</a>  | _A setup where a primary server handles all requests under normal conditions, and in case of its failure, a failover mechanism automatically redirects traffic to a backup server. This ensures continuous service availability, albeit with potential limitations in scalability and [performance](#Performance) compared to multi-server configurations._                                                                |
-| <a id="Synchronous Image Loading">Synchronous Image Loading</a>               | _A process where images are loaded in a sequential manner, with each image request being processed and completed before the next one begins. This approach can cause delays in user interface responsiveness, as the system waits for each image to load completely before proceeding with other tasks._                                                                                                   |
-| <a id="Usability">Usability</a>                              | _Refers to the ease with which users can effectively interact with a software system. In software architecture, usability encompasses designing interfaces and workflows that are intuitive, accessible, and provide a positive user experience._                                                                                                                                                         |
+| Term                                                                                                                    | Definition                                                                                                                                                                                                                                                                                                                                                                            | Resources                                                                             |
+| ----------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------- |
+| <a id="Asynchronous Image Loading with Image Service Caching">Asynchronous Image Loading with Image Service Caching</a> | _Asynchronous loading is a technique that allows certain resources on a web page, such as scripts or images, to be loaded in the background while the rest of the page continues to load. Image service caching is the process of storing images on a server and making them available to clients via a URL or directly from a database._                                             | https://tillison.co.uk/blog ; https://cloudinary.com/glossary/image-cache-server      |
+| <a id="Content Delivery Network (CDN)">Content Delivery Network (CDN)</a>                                               | _A content delivery network (CDN) is a distributed network of servers that can efficiently deliver web content to users. A CDN store cached content on edge servers in point-of-presence (POP) locations that are close to end users, to minimize latency._                                                                                                                           | https://learn.microsoft.com/                                                          |
+| <a id="Firebase Cloud Messaging">Firebase Cloud Messaging</a>                                                           | _Firebase Cloud Messaging (FCM), formerly known as Google Cloud Messaging (GCM), is a cross-platform cloud service for messages and notifications for Android, iOS, and web applications. FCM allows third-party application developers to send notifications or messages from servers hosted by FCM to users of the platform or end users._                                          | https://en.wikipedia.org/wiki/Firebase_Cloud_Messaging                                |
+| <a id="Load Balancing">Load Balancing</a>                                                                               | _Load balancing is the process of distributing network traffic across multiple servers. This ensures no single server bears too much demand. By spreading the work evenly, load balancing improves application responsiveness. It also increases availability of applications and websites for users._                                                                                | https://avinetworks.com/what-is-load-balancing/                                       |
+| <a id="Microservices">Microservices</a>                                                                                 | _Microservices are an architectural approach to building applications where each core function, or service, is built and deployed independently. Microservice architecture is distributed and loosely coupled, so one component’s failure won’t break the whole app. Independent components work together and communicate with well-defined API contracts._                           | https://azure.microsoft.com/en-gb/solutions/microservice-applications/                |
+| <a id="Monolithic">Monolithic</a>                                                                                       | _In a monolithic architecture, the operating system kernel is designed to provide all operating system services, including memory management, process scheduling, device drivers, and file systems, in a single, large binary. This means that all code runs in kernel space, with no separation between kernel and user-level processes._                                            | https://www.geeksforgeeks.org/monolithic-architecture/                                |
+| <a id="node.js">node.js</a>                                                                                             | _Node.js is a cross-platform, open-source JavaScript runtime environment that can run on Windows, Linux, Unix, macOS, and more. Node.js runs on the V8 JavaScript engine, and executes JavaScript code outside a web browser._                                                                                                                                                        | https://en.wikipedia.org/wiki/Node.js                                                 |
+| <a id="Performance">Performance</a>                                                                                     | _This characteristic represents the performance relative to the amount of resources used under stated conditions._                                                                                                                                                                                                                                                                    | https://iso25000.com/index.php/en/iso-25000-standards/iso-25010                       |
+| <a id="React Native">React Native</a>                                                                                   | _React Native is a framework that allows you to create native mobile applications using JavaScript and React, a library for building user interfaces. React Native uses native components and APIs to render the UI, instead of creating a web-based view. This means that your app can run faster and smoother on different platforms, such as Android and iOS._                     | https://reactnative.dev/                                                              |
+| <a id="Reliability">Reliability</a>                                                                                     | _Degree to which a system, product or component performs specified functions under specified conditions for a specified period of time._                                                                                                                                                                                                                                              | https://iso25000.com/index.php/en/iso-25000-standards/iso-25010                       |
+| <a id="Single Server with Failover Mechanism">Single Server with Failover Mechanism</a>                                 | _Server failover is the practice of having a backup server (or servers) prepared to automatically take over if the primary server goes offline. In server failover, a secondary server takes over when the primary server fails. The goal of server failover is to improve a network or website's fault tolerance, or its ability to continue operating when one of its parts fails._ | https://www.cloudflare.com/learning/performance/what-is-server-failover/              |
+| <a id="Synchronous Image Loading">Synchronous Image Loading</a>                                                         | _A process where images are loaded in a sequential manner, with each image request being processed and completed before the next one begins. This approach can cause delays in user interface responsiveness, as the system waits for each image to load completely before proceeding with other tasks._                                                                              | https://agardner.net/web-performance-101-image-loading-sync-vs-async-vs-lazy-loading/ |
+| <a id="Usability">Usability</a>                                                                                         | _Degree to which a product or system can be used by specified users to achieve specified goals with effectiveness, efficiency and satisfaction in a specified context of use._                                                                                                                                                                                                        | https://iso25000.com/index.php/en/iso-25000-standards/iso-25010                       |
